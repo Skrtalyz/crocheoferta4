@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Image from 'next/image';
 import {
@@ -34,6 +35,7 @@ import {
 import Countdown from '@/components/countdown';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
+import CustomVideoPlayer from '@/components/custom-video-player';
 
 const testimonials = [
   {
@@ -343,13 +345,7 @@ export default function CrochetLandingPage() {
         <section className="py-16 md:py-24 text-center container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">Assista e descubra como é fácil começar</h2>
           <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center overflow-hidden">
-            <video
-              src="https://www.dropbox.com/scl/fi/sjbm84rv3u3wv4ctto1gm/depoimento-croche-Feito-com-o-Clipchamp.mp4?rlkey=anb51i9lu0ln3pjlcuiazfdnx&st=5tfv32ex&raw=1"
-              controls
-              className="w-full h-full"
-            >
-              Seu navegador não suporta o elemento de vídeo.
-            </video>
+            <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/sjbm84rv3u3wv4ctto1gm/depoimento-croche-Feito-com-o-Clipchamp.mp4?rlkey=anb51i9lu0ln3pjlcuiazfdnx&st=5tfv32ex&raw=1" />
           </div>
         </section>
 
