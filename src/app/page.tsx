@@ -97,6 +97,7 @@ export default function CrochetLandingPage() {
 
         <section className="py-16 md:py-24 bg-card">
           <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">O que você vai conquistar com a Coleção Lucre com Charme</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
               {[
                 { icon: <DollarSign className="w-10 h-10 text-primary" />, text: 'Lucro de até R$3.000/mês com peças rápidas de crochê' },
