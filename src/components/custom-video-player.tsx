@@ -22,12 +22,17 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
       
       videoElement.addEventListener('canplay', handleCanPlay);
 
-      // Try to play muted on load
+      // Try to play on load (browsers may block this if not muted)
       videoElement.play().then(() => {
         setIsPlaying(true);
       }).catch(error => {
         // Autoplay was prevented.
-        setIsPlaying(false);
+        videoElement.muted = true;
+        videoElement.play().then(() => {
+            setIsPlaying(true);
+        }).catch(error2 => {
+            setIsPlaying(false);
+        });
       });
 
       return () => {
@@ -46,6 +51,10 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
         videoElement.pause();
         setIsPlaying(false);
       }
+      // Unmute on first interaction
+      if (videoElement.muted) {
+        videoElement.muted = false;
+      }
     }
   };
 
@@ -55,7 +64,6 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
         ref={videoRef}
         src={src}
         loop
-        muted
         playsInline
         className="w-full h-full object-cover"
         onPlay={() => setIsPlaying(true)}
