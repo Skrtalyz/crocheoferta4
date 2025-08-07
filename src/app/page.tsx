@@ -174,7 +174,7 @@ export default function CrochetLandingPage() {
           </CTAButton>
         </section>
 
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-16 md:py-24 bg-secondary">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">O que você vai conquistar com a Coleção Lucre com Charme</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
@@ -206,7 +206,7 @@ export default function CrochetLandingPage() {
               { icon: <Heart />, title: 'Satisfação pessoal e terapia criativa', description: 'Redescubra o prazer de criar com as mãos e alivie o estresse do dia a dia.' },
               { icon: <BadgeCheck />, title: 'Técnicas validadas por profissionais', description: 'Métodos testados que garantem peças com acabamento profissional.' },
             ].map((item, index) => (
-              <Card key={index} className="text-center shadow-lg hover:shadow-xl transition-shadow">
+              <Card key={index} className="text-center shadow-lg hover:shadow-xl transition-shadow bg-card">
                 <CardHeader>
                   <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-4">
                     {React.cloneElement(item.icon, { className: 'w-8 h-8 text-primary icon-metallic animate-float' })}
@@ -221,7 +221,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-16 md:py-24 bg-secondary">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-12">O que você vai aprender</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -247,7 +247,7 @@ export default function CrochetLandingPage() {
                   'data-ai-hint': 'crochet gifts',
                 },
               ].map((item, index) => (
-                <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-card">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -328,7 +328,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-16 md:py-24 bg-secondary">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">Veja o que quem comprou está dizendo</h2>
             <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {detailedTestimonials.map((testimonial, index) => (
@@ -358,7 +358,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-16 md:py-24 bg-secondary">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">O que as nossas alunas estão falando sobre a coleção:</h2>
                 <Carousel
@@ -396,7 +396,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-16 md:py-24 bg-secondary">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-6">
                 <BadgeCheck className="w-12 h-12 text-primary icon-metallic animate-shake" />
@@ -431,7 +431,7 @@ export default function CrochetLandingPage() {
         </section>
       </main>
 
-      <footer className="py-8 bg-card text-center">
+      <footer className="py-8 bg-secondary text-center">
         <div className="container mx-auto px-4">
           <p className="font-bold font-headline text-lg">Coleção Lucre com Charme – Transforme seu hobby em renda</p>
           <p className="text-sm mt-2">&copy; 2025 Coleção Lucre com Charme. Todos os direitos reservados.</p>
