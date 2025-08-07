@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from 'react';
-import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
+import { Play, Pause } from 'lucide-react';
 
 interface CustomVideoPlayerProps {
   src: string;
@@ -10,9 +10,7 @@ interface CustomVideoPlayerProps {
 
 const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -28,46 +26,12 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
     }
   }, [src]);
 
-  useEffect(() => {
-    const videoElement = videoRef.current;
-    const containerElement = containerRef.current;
-
-    if (!videoElement || !containerElement) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-          videoElement.play().then(() => {
-            setIsPlaying(true);
-          }).catch(error => {
-            setIsPlaying(false);
-          });
-        } else {
-          videoElement.pause();
-          setIsPlaying(false);
-        }
-      },
-      {
-        threshold: 0.5,
-      }
-    );
-
-    if (isReady) {
-      observer.observe(containerElement);
-    }
-
-    return () => {
-      if (containerElement) {
-        observer.unobserve(containerElement);
-      }
-    };
-  }, [isReady]);
-
   const togglePlayPause = () => {
     const videoElement = videoRef.current;
     if (videoElement) {
       if (videoElement.paused) {
+        // Unmute on play
+        videoElement.muted = false;
         videoElement.play();
         setIsPlaying(true);
       } else {
@@ -77,23 +41,13 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
     }
   };
 
-  const toggleMute = () => {
-    const videoElement = videoRef.current;
-    if (videoElement) {
-        videoElement.muted = !videoElement.muted;
-        setIsMuted(videoElement.muted);
-    }
-  };
-
-
   return (
-    <div ref={containerRef} className="relative w-full h-full cursor-pointer" onClick={togglePlayPause}>
+    <div className="relative w-full h-full cursor-pointer" onClick={togglePlayPause}>
       <video
         ref={videoRef}
         src={src}
         loop
         playsInline
-        muted={isMuted}
         className="w-full h-full object-cover"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
@@ -101,29 +55,33 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
       >
         Seu navegador não suporta o elemento de vídeo.
       </video>
-      {isReady && (
-        <div className="absolute bottom-2 left-2 flex items-center gap-2">
+      {isReady && !isPlaying && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
           <button
             onClick={(e) => {
               e.stopPropagation();
               togglePlayPause();
             }}
-            className="p-2 bg-black/50 text-white rounded-full hover:bg-black/75 transition-colors focus:outline-none"
-            aria-label={isPlaying ? 'Pausar' : 'Reproduzir'}
+            className="p-4 bg-black/50 text-white rounded-full hover:bg-black/75 transition-colors focus:outline-none"
+            aria-label={'Reproduzir'}
           >
-            {isPlaying ? <Pause size={20} /> : <Play size={20} />}
-          </button>
-           <button
-            onClick={(e) => {
-              e.stopPropagation();
-              toggleMute();
-            }}
-            className="p-2 bg-black/50 text-white rounded-full hover:bg-black/75 transition-colors focus:outline-none"
-            aria-label={isMuted ? 'Ativar som' : 'Desativar som'}
-          >
-            {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+            <Play size={40} className="ml-1" />
           </button>
         </div>
+      )}
+      {isReady && isPlaying && (
+         <div className="absolute bottom-2 left-2 flex items-center gap-2">
+         <button
+           onClick={(e) => {
+             e.stopPropagation();
+             togglePlayPause();
+           }}
+           className="p-2 bg-black/50 text-white rounded-full hover:bg-black/75 transition-colors focus:outline-none"
+           aria-label={isPlaying ? 'Pausar' : 'Reproduzir'}
+         >
+           {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+         </button>
+       </div>
       )}
     </div>
   );
