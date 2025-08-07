@@ -369,44 +369,9 @@ export default function CrochetLandingPage() {
         </section>
 
         <section className="py-16 md:py-24 bg-card">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-4">Mais de 14.000 alunas satisfeitas com nota 5 estrelas</h2>
-            <div className="flex justify-center items-center gap-1 mb-12 text-primary">
-              <Star fill="currentColor" className="w-6 h-6" />
-              <Star fill="currentColor" className="w-6 h-6" />
-              <Star fill="currentColor" className="w-6 h-6" />
-              <Star fill="currentColor" className="w-6 h-6" />
-              <Star fill="currentColor" className="w-6 h-6" />
-            </div>
-            <Carousel
-              opts={{ align: "start", loop: true }}
-              className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
-            >
-              <CarouselContent>
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1 h-full">
-                      <Card className="flex flex-col justify-between h-full shadow-md">
-                        <CardContent className="p-6 flex flex-col items-center text-center">
-                          <Image
-                            src={testimonial.avatar}
-                            alt={`Avatar de ${testimonial.name}`}
-                            width={80}
-                            height={80}
-                            className="rounded-full mb-4 border-2 border-primary"
-                            data-ai-hint={testimonial['data-ai-hint']}
-                          />
-                          <p className="italic">"{testimonial.quote}"</p>
-                          <p className="font-bold mt-4 text-primary">- {testimonial.name}</p>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden sm:flex" />
-              <CarouselNext className="hidden sm:flex" />
-            </Carousel>
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-4">⭐ Mais de 14.000 alunas satisfeitas com nota 5 estrelas</h2>
+            <p className="text-lg md:text-xl mt-4">Junte-se a milhares de mulheres que já transformaram sua vida com o crochê!</p>
           </div>
         </section>
 
