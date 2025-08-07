@@ -375,6 +375,17 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-4 max-w-3xl text-center">
+            <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-6">
+                <BadgeCheck className="w-12 h-12 text-primary" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Garantia de 7 dias ou seu dinheiro de volta</h2>
+            <p className="text-lg text-muted-foreground mb-6">Garanta sua coleção sem risco. Se não gostar, devolvemos seu dinheiro.</p>
+            <p className="text-muted-foreground">Você tem 7 dias para testar todas as receitas. Se não ficar satisfeita, basta enviar um e-mail e devolvemos 100% do seu investimento.</p>
+          </div>
+        </section>
+
         <section className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Oferta especial de hoje inclui um módulo extra de Amigurumi!</h2>
