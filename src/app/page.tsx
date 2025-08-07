@@ -169,7 +169,7 @@ export default function CrochetLandingPage() {
           <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center">
             <p className="text-muted-foreground">Seu vídeo (VSL) aqui</p>
           </div>
-          <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
+          <CTAButton href="#oferta" className="bg-green-600 hover:bg-green-700 text-white font-bold">
             👉 QUERO RECEBER O CURSO POR R$12,90
           </CTAButton>
         </section>
@@ -407,7 +407,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
+        <section id="oferta" className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
              <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center justify-center gap-4">
               <AnimatedGiftIcon />
