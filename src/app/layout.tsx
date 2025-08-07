@@ -2,6 +2,14 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Script from 'next/script';
+import { Inter } from 'next/font/google';
+import { cn } from '@/lib/utils';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  weight: ['400', '500', '700', '900']
+});
 
 export const metadata: Metadata = {
   title: 'Crochet Cashflow',
@@ -16,9 +24,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet" />
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
@@ -39,7 +44,7 @@ export default function RootLayout({
           />
         </noscript>
       </head>
-      <body className="font-body antialiased">
+      <body className={cn("font-body antialiased", inter.variable)}>
         {children}
         <Toaster />
       </body>

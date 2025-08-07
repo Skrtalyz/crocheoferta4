@@ -142,7 +142,7 @@ export default function CrochetLandingPage() {
   const checkoutUrl = "https://www.ggcheckout.com/checkout/v2/vKlK889o7aTDZGgpBLOb";
 
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-background text-foreground font-body">
       <header className="bg-accent text-accent-foreground text-center p-3 font-bold text-sm md:text-base animate-pulse">
         <div className="container mx-auto flex flex-wrap items-center justify-center gap-x-2">
           <span>CUPOM DE DESCONTO APLICADO — VÁLIDO ATÉ HOJE 07/08/2025 🔥</span>
@@ -156,10 +156,10 @@ export default function CrochetLandingPage() {
 
       <main>
         <section className="py-16 md:py-24 text-center container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold mb-4 leading-tight">
-            Transforme crochê em até <span className="uppercase font-bold text-glow-gold">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-black mb-4 leading-tight">
+            Transforme crochê em até <span className="uppercase text-glow-gold">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
           </h1>
-          <p className="max-w-3xl mx-auto text-lg md:text-xl mb-8">
+          <p className="max-w-3xl mx-auto text-lg md:text-xl mb-8 font-medium">
             O curso definitivo para mulheres que querem transformar sua paixão por crochê em uma fonte de renda estável e prazerosa — mesmo que nunca tenham vendido antes!
           </p>
           <div className="my-8">
@@ -169,14 +169,14 @@ export default function CrochetLandingPage() {
           <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center">
             <p className="text-muted-foreground">Seu vídeo (VSL) aqui</p>
           </div>
-          <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white">
+          <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
             👉 QUERO RECEBER O CURSO POR R$12,90
           </CTAButton>
         </section>
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">O que você vai conquistar com a Coleção Lucre com Charme</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai conquistar com a Coleção Lucre com Charme</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
               {[
                 { icon: <DollarSign className="w-10 h-10 text-primary icon-metallic animate-float" />, text: 'Lucro de até R$3.000/mês com peças rápidas de crochê' },
@@ -196,7 +196,7 @@ export default function CrochetLandingPage() {
         </section>
 
         <section className="py-16 md:py-24 container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">6 Motivos para Investir na Coleção Lucre com Charme</h2>
+          <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">6 Motivos para Investir na Coleção Lucre com Charme</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { icon: <GraduationCap />, title: 'Aprenda mesmo sendo iniciante', description: 'Aulas passo a passo, perfeitas para quem está começando do zero.' },
@@ -211,7 +211,7 @@ export default function CrochetLandingPage() {
                   <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-4">
                     {React.cloneElement(item.icon, { className: 'w-8 h-8 text-primary icon-metallic animate-float' })}
                   </div>
-                  <CardTitle className="font-headline">{item.title}</CardTitle>
+                  <CardTitle className="font-headline font-bold">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>{item.description}</p>
@@ -223,7 +223,7 @@ export default function CrochetLandingPage() {
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-12">O que você vai aprender</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai aprender</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -291,7 +291,7 @@ export default function CrochetLandingPage() {
               <div className="absolute -top-3 -right-3 text-2xl animate-pulse delay-300">⚠️</div>
               <div className="absolute -bottom-3 -right-3 text-2xl animate-pulse delay-700">⚠️</div>
 
-              <h2 className="text-3xl font-bold flex items-center justify-center gap-2">
+              <h2 className="text-3xl font-black flex items-center justify-center gap-2">
                 <AlertTriangle className="w-8 h-8" />
                 VAGAS LIMITADAS!
               </h2>
@@ -307,7 +307,7 @@ export default function CrochetLandingPage() {
               </div>
             </div>
             <div className="mt-8">
-              <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white">
+              <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
                 SIM! QUERO A COLEÇÃO LUCRE COM CHARME POR R$12,90
               </CTAButton>
             </div>
@@ -329,7 +329,7 @@ export default function CrochetLandingPage() {
         </section>
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">Veja o que quem comprou está dizendo</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Veja o que quem comprou está dizendo</h2>
             <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {detailedTestimonials.map((testimonial, index) => (
                 <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow bg-background">
@@ -352,7 +352,7 @@ export default function CrochetLandingPage() {
         </section>
         
         <section className="py-16 md:py-24 text-center container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">Assista e descubra como é fácil começar</h2>
+          <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Assista e descubra como é fácil começar</h2>
           <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center overflow-hidden">
             <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/sjbm84rv3u3wv4ctto1gm/depoimento-croche-Feito-com-o-Clipchamp.mp4?rlkey=anb51i9lu0ln3pjlcuiazfdnx&st=5tfv32ex&raw=1" />
           </div>
@@ -360,7 +360,7 @@ export default function CrochetLandingPage() {
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">O que as nossas alunas estão falando sobre a coleção:</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que as nossas alunas estão falando sobre a coleção:</h2>
                 <Carousel
                     opts={{ align: "start", loop: true }}
                     className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
@@ -391,7 +391,7 @@ export default function CrochetLandingPage() {
 
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-4">⭐ Mais de 14.000 alunas satisfeitas com nota 5 estrelas</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-4">⭐ Mais de 14.000 alunas satisfeitas com nota 5 estrelas</h2>
             <p className="text-lg md:text-xl mt-4">Junte-se a milhares de mulheres que já transformaram sua vida com o crochê!</p>
           </div>
         </section>
@@ -401,7 +401,7 @@ export default function CrochetLandingPage() {
             <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-6">
                 <BadgeCheck className="w-12 h-12 text-primary icon-metallic animate-shake" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Garantia de 7 dias ou seu dinheiro de volta</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-black mb-4">Garantia de 7 dias ou seu dinheiro de volta</h2>
             <p className="text-lg text-muted-foreground mb-6">Garanta sua coleção sem risco. Se não gostar, devolvemos seu dinheiro.</p>
             <p className="text-muted-foreground">Você tem 7 dias para testar todas as receitas. Se não ficar satisfeita, basta enviar um e-mail e devolvemos 100% do seu investimento.</p>
           </div>
@@ -418,7 +418,7 @@ export default function CrochetLandingPage() {
               <p className="text-6xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg text-glow-gold">R$12,90</p>
               <p className="text-xl mt-2 font-semibold">Pagamento único, acesso vitalício</p>
             </div>
-            <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white">
+            <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
               QUERO COMEÇAR AGORA POR R$12,90
             </CTAButton>
             <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm max-w-3xl mx-auto">
