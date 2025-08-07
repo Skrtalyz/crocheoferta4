@@ -18,6 +18,7 @@ import {
   Star,
   TrendingUp,
   Users,
+  AlertTriangle,
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -204,73 +205,87 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 container mx-auto px-4">
-          <div className="bg-primary/10 border-l-4 border-primary text-primary-foreground-dark p-6 rounded-lg text-center max-w-3xl mx-auto">
-            <p className="text-xl font-bold text-primary">⚠️ VAGAS LIMITADAS!</p>
-            <p className="text-lg text-foreground">Liberamos apenas 10 acessos promocionais por semana para garantir a qualidade no suporte. Após isso, o valor volta ao preço original.</p>
-          </div>
-          <div className="text-center mt-8">
-            <CTAButton>
-              SIM! EU QUERO A COLEÇÃO LUCRE COM CHARME POR R$12,90
-            </CTAButton>
+        <section className="py-16 md:py-24 bg-primary/5">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-3xl mx-auto bg-destructive/10 border-2 border-dashed border-destructive/50 p-6 rounded-2xl relative">
+              <div className="absolute -top-3 -left-3 text-2xl animate-pulse">⚠️</div>
+              <div className="absolute -bottom-3 -left-3 text-2xl animate-pulse delay-500">⚠️</div>
+              <div className="absolute -top-3 -right-3 text-2xl animate-pulse delay-300">⚠️</div>
+              <div className="absolute -bottom-3 -right-3 text-2xl animate-pulse delay-700">⚠️</div>
+
+              <h2 className="text-3xl font-bold text-destructive flex items-center justify-center gap-2">
+                <AlertTriangle className="w-8 h-8" />
+                VAGAS LIMITADAS!
+              </h2>
+              <p className="text-lg text-foreground font-semibold mt-4">
+                Liberamos apenas 10 acessos promocionais por semana para garantir a qualidade no suporte.
+              </p>
+              <div className="mt-4 bg-accent/20 text-accent-foreground py-2 px-4 rounded-md">
+                <p className="font-bold">Após isso, o valor volta ao preço original.</p>
+              </div>
+            </div>
+            <div className="mt-8">
+              <CTAButton>
+                SIM! QUERO A COLEÇÃO LUCRE COM CHARME POR R$12,90
+              </CTAButton>
+            </div>
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto text-foreground/80">
+                <div className="flex flex-col items-center gap-2">
+                  <CheckCircle className="w-8 h-8 text-primary"/>
+                  <span className="font-semibold">Garantia de 7 dias</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <Lock className="w-8 h-8 text-primary"/>
+                  <span className="font-semibold">Pagamento 100% seguro</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <MessageCircle className="w-8 h-8 text-primary"/>
+                  <span className="font-semibold">Suporte via WhatsApp</span>
+                </div>
+            </div>
           </div>
         </section>
 
         <section className="py-16 md:py-24 bg-card">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              {[
-                { icon: <CheckCircle className="w-10 h-10 text-primary"/>, text: "Garantia de 7 dias" },
-                { icon: <Lock className="w-10 h-10 text-primary"/>, text: "Pagamento 100% seguro" },
-                { icon: <MessageCircle className="w-10 h-10 text-primary"/>, text: "Suporte via WhatsApp" }
-              ].map((item, index) => (
-                <div key={index} className="flex flex-col items-center gap-3">
-                  {item.icon}
-                  <span className="font-semibold text-lg">{item.text}</span>
-                </div>
-              ))}
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-4">Mais de 14.000 alunas satisfeitas com nota 5 estrelas</h2>
+            <div className="flex justify-center items-center gap-1 mb-12 text-primary">
+              <Star fill="currentColor" className="w-6 h-6" />
+              <Star fill="currentColor" className="w-6 h-6" />
+              <Star fill="currentColor" className="w-6 h-6" />
+              <Star fill="currentColor" className="w-6 h-6" />
+              <Star fill="currentColor" className="w-6 h-6" />
             </div>
+            <Carousel
+              opts={{ align: "start", loop: true }}
+              className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
+            >
+              <CarouselContent>
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1 h-full">
+                      <Card className="flex flex-col justify-between h-full shadow-md">
+                        <CardContent className="p-6 flex flex-col items-center text-center">
+                          <Image
+                            src={testimonial.avatar}
+                            alt={`Avatar de ${testimonial.name}`}
+                            width={80}
+                            height={80}
+                            className="rounded-full mb-4 border-2 border-primary"
+                            data-ai-hint={testimonial['data-ai-hint']}
+                          />
+                          <p className="italic">"{testimonial.quote}"</p>
+                          <p className="font-bold mt-4 text-primary">- {testimonial.name}</p>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden sm:flex" />
+              <CarouselNext className="hidden sm:flex" />
+            </Carousel>
           </div>
-        </section>
-
-        <section className="py-16 md:py-24 container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-4">Mais de 14.000 alunas satisfeitas com nota 5 estrelas</h2>
-          <div className="flex justify-center items-center gap-1 mb-12 text-primary">
-            <Star fill="currentColor" className="w-6 h-6" />
-            <Star fill="currentColor" className="w-6 h-6" />
-            <Star fill="currentColor" className="w-6 h-6" />
-            <Star fill="currentColor" className="w-6 h-6" />
-            <Star fill="currentColor" className="w-6 h-6" />
-          </div>
-          <Carousel
-            opts={{ align: "start", loop: true }}
-            className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
-          >
-            <CarouselContent>
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 h-full">
-                    <Card className="flex flex-col justify-between h-full shadow-md">
-                      <CardContent className="p-6 flex flex-col items-center text-center">
-                        <Image
-                          src={testimonial.avatar}
-                          alt={`Avatar de ${testimonial.name}`}
-                          width={80}
-                          height={80}
-                          className="rounded-full mb-4 border-2 border-primary"
-                          data-ai-hint={testimonial['data-ai-hint']}
-                        />
-                        <p className="italic">"{testimonial.quote}"</p>
-                        <p className="font-bold mt-4 text-primary">- {testimonial.name}</p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex" />
-            <CarouselNext className="hidden sm:flex" />
-          </Carousel>
         </section>
 
         <section className="py-16 md:py-24 bg-primary text-primary-foreground">
