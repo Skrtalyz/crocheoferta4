@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   ArrowDown,
   BadgeCheck,
@@ -112,13 +113,15 @@ const studentComments = [
     { name: 'Ivone P.', quote: 'R$3.200 em dezembro! Recorde!' },
 ];
 
-const CTAButton = ({ children, className }: { children: React.ReactNode, className?: string }) => (
-  <Button
-    size="lg"
-    className={`w-full max-w-md mx-auto h-auto py-4 px-6 text-lg md:text-xl font-bold bg-accent text-accent-foreground shadow-lg hover:bg-accent/90 transform hover:scale-105 transition-transform duration-300 ${className} whitespace-normal`}
-  >
-    {children}
-  </Button>
+const CTAButton = ({ children, className, href }: { children: React.ReactNode, className?: string, href: string }) => (
+  <Link href={href} className={`w-full max-w-md mx-auto block ${className}`}>
+    <Button
+      size="lg"
+      className="w-full h-auto py-4 px-6 text-lg md:text-xl font-bold bg-accent text-accent-foreground shadow-lg hover:bg-accent/90 transform hover:scale-105 transition-transform duration-300 whitespace-normal"
+    >
+      {children}
+    </Button>
+  </Link>
 );
 
 const AnimatedGiftIcon = () => (
@@ -132,6 +135,8 @@ const AnimatedGiftIcon = () => (
 
 
 export default function CrochetLandingPage() {
+  const checkoutUrl = "https://www.ggcheckout.com/checkout/v2/vKlK889o7aTDZGgpBLOb";
+
   return (
     <div className="bg-background text-foreground">
       <header className="bg-accent text-accent-foreground text-center p-3 font-bold text-sm md:text-base animate-pulse">
@@ -160,7 +165,7 @@ export default function CrochetLandingPage() {
           <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center">
             <p className="text-muted-foreground">Seu vídeo (VSL) aqui</p>
           </div>
-          <CTAButton>
+          <CTAButton href={checkoutUrl}>
             👉 QUERO RECEBER O CURSO POR R$12,90
           </CTAButton>
         </section>
@@ -298,7 +303,7 @@ export default function CrochetLandingPage() {
               </div>
             </div>
             <div className="mt-8">
-              <CTAButton className="bg-green-600 hover:bg-green-700 text-white">
+              <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white">
                 SIM! QUERO A COLEÇÃO LUCRE COM CHARME POR R$12,90
               </CTAButton>
             </div>
@@ -409,7 +414,7 @@ export default function CrochetLandingPage() {
               <p className="text-6xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg text-glow-gold">R$12,90</p>
               <p className="text-xl mt-2 font-semibold">Pagamento único, acesso vitalício</p>
             </div>
-            <CTAButton className="bg-green-600 hover:bg-green-700 text-white">
+            <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white">
               QUERO COMEÇAR AGORA POR R$12,90
             </CTAButton>
             <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm max-w-3xl mx-auto">
