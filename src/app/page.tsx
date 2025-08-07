@@ -37,6 +37,7 @@ import Countdown from '@/components/countdown';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import CustomVideoPlayer from '@/components/custom-video-player';
+import { cn } from '@/lib/utils';
 
 const testimonials = [
   {
@@ -114,10 +115,13 @@ const studentComments = [
 ];
 
 const CTAButton = ({ children, className, href }: { children: React.ReactNode, className?: string, href: string }) => (
-  <Link href={href} className={`w-full max-w-md mx-auto block ${className}`}>
+  <Link href={href} className="w-full max-w-md mx-auto block">
     <Button
       size="lg"
-      className="w-full h-auto py-4 px-6 text-lg md:text-xl font-bold bg-accent text-accent-foreground shadow-lg hover:bg-accent/90 transform hover:scale-105 transition-transform duration-300 whitespace-normal"
+      className={cn(
+        "w-full h-auto py-4 px-6 text-lg md:text-xl font-bold bg-accent text-accent-foreground shadow-lg hover:bg-accent/90 transform hover:scale-105 transition-transform duration-300 whitespace-normal",
+        className
+      )}
     >
       {children}
     </Button>
