@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 
 const Countdown = () => {
-  // Set initial time to 3 hours and 57 minutes in seconds
-  const initialTime = 3 * 3600 + 57 * 60;
+  // Set initial time to 4 minutes in seconds
+  const initialTime = 4 * 60;
   const [timeLeft, setTimeLeft] = useState(initialTime);
 
   useEffect(() => {
