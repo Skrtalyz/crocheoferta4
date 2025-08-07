@@ -10,6 +10,7 @@ interface CustomVideoPlayerProps {
 
 const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isReady, setIsReady] = useState(false);
 
@@ -19,27 +20,52 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
       const handleCanPlay = () => {
         setIsReady(true);
       };
-      
       videoElement.addEventListener('canplay', handleCanPlay);
-
-      // Try to play on load (browsers may block this if not muted)
-      videoElement.play().then(() => {
-        setIsPlaying(true);
-      }).catch(error => {
-        // Autoplay was prevented.
-        videoElement.muted = true;
-        videoElement.play().then(() => {
-            setIsPlaying(true);
-        }).catch(error2 => {
-            setIsPlaying(false);
-        });
-      });
-
       return () => {
         videoElement.removeEventListener('canplay', handleCanPlay);
       };
     }
   }, [src]);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    const containerElement = containerRef.current;
+
+    if (!videoElement || !containerElement) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          // Try to play when it enters viewport
+          videoElement.muted = false; // Unmute before playing
+          videoElement.play().then(() => {
+            setIsPlaying(true);
+          }).catch(error => {
+            // Autoplay with sound was prevented. Mute and try again.
+            // This is a common browser policy.
+            videoElement.muted = true;
+            videoElement.play().then(() => setIsPlaying(true));
+          });
+        } else {
+          // Pause when it leaves viewport
+          videoElement.pause();
+          setIsPlaying(false);
+        }
+      },
+      {
+        threshold: 0.5, // Start playing when 50% of the video is visible
+      }
+    );
+
+    observer.observe(containerElement);
+
+    return () => {
+      if (containerElement) {
+        observer.unobserve(containerElement);
+      }
+    };
+  }, [isReady]); // Depend on isReady to ensure video can be played
 
   const togglePlayPause = () => {
     const videoElement = videoRef.current;
@@ -51,7 +77,7 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
         videoElement.pause();
         setIsPlaying(false);
       }
-      // Unmute on first interaction
+      // Unmute on first manual interaction
       if (videoElement.muted) {
         videoElement.muted = false;
       }
@@ -59,12 +85,13 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
   };
 
   return (
-    <div className="relative w-full h-full cursor-pointer" onClick={togglePlayPause}>
+    <div ref={containerRef} className="relative w-full h-full cursor-pointer" onClick={togglePlayPause}>
       <video
         ref={videoRef}
         src={src}
         loop
         playsInline
+        muted // Start muted to allow autoplay in most browsers
         className="w-full h-full object-cover"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
