@@ -165,7 +165,7 @@ export default function CrochetLandingPage() {
           <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center">
             <p className="text-muted-foreground">Seu vídeo (VSL) aqui</p>
           </div>
-          <CTAButton href={checkoutUrl}>
+          <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white">
             👉 QUERO RECEBER O CURSO POR R$12,90
           </CTAButton>
         </section>
