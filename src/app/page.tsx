@@ -57,7 +57,7 @@ const testimonials = [
 const CTAButton = ({ children, className }: { children: React.ReactNode, className?: string }) => (
   <Button
     size="lg"
-    className={`w-full max-w-md mx-auto h-auto py-4 px-6 text-lg md:text-xl font-bold bg-accent text-accent-foreground shadow-lg hover:bg-accent/90 transform hover:scale-105 transition-transform duration-300 ${className}`}
+    className={`w-full max-w-md mx-auto h-auto py-4 px-6 text-lg md:text-xl font-bold bg-accent text-accent-foreground shadow-lg hover:bg-accent/90 transform hover:scale-105 transition-transform duration-300 ${className} whitespace-normal`}
   >
     {children}
   </Button>
