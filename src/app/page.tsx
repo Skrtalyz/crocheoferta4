@@ -157,7 +157,7 @@ export default function CrochetLandingPage() {
       <main>
         <section className="py-16 md:py-24 text-center container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-black mb-4 leading-tight">
-            Transforme crochê em até <span className="uppercase text-glow-gold">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
+            Transforme crochê em até <span className="uppercase text-yellow-400 text-glow-gold">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
           </h1>
           <p className="max-w-3xl mx-auto text-lg md:text-xl mb-8 font-medium">
             O curso definitivo para mulheres que querem transformar sua paixão por crochê em uma fonte de renda estável e prazerosa — mesmo que nunca tenham vendido antes!
