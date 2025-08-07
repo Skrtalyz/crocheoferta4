@@ -31,6 +31,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import Countdown from '@/components/countdown';
+import { Progress } from '@/components/ui/progress';
 
 const testimonials = [
   {
@@ -221,7 +222,11 @@ export default function CrochetLandingPage() {
                 Liberamos apenas 10 acessos promocionais por semana para garantir a qualidade no suporte.
               </p>
               <div className="mt-4 bg-white/20 py-2 px-4 rounded-md">
-                <p className="font-bold">Após isso, o valor volta ao preço original.</p>
+                <div className="w-full max-w-sm mx-auto">
+                    <p className="text-sm font-bold text-center mb-1">VAGAS PREENCHENDO</p>
+                    <Progress value={85} className="bg-white/30 h-3 [&>div]:bg-yellow-400"/>
+                </div>
+                <p className="font-bold mt-2">Após isso, o valor volta ao preço original.</p>
               </div>
             </div>
             <div className="mt-8">
