@@ -130,7 +130,7 @@ export default function CrochetLandingPage() {
               <Card key={index} className="text-center shadow-lg hover:shadow-xl transition-shadow">
                 <CardHeader>
                   <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-4">
-                    {React.cloneElement(item.icon, { className: 'w-8 h-8 text-primary' })}
+                    {React.cloneElement(item.icon, { className: 'w-8 h-8 text-primary icon-metallic animate-float' })}
                   </div>
                   <CardTitle className="font-headline">{item.title}</CardTitle>
                 </CardHeader>
