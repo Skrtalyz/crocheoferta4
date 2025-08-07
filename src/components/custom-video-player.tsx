@@ -38,14 +38,13 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
           // Try to play when it enters viewport
-          videoElement.muted = false; // Unmute before playing
+          videoElement.muted = true; // Start muted to allow autoplay
           videoElement.play().then(() => {
             setIsPlaying(true);
           }).catch(error => {
-            // Autoplay with sound was prevented. Mute and try again.
+            // Autoplay was prevented.
             // This is a common browser policy.
-            videoElement.muted = true;
-            videoElement.play().then(() => setIsPlaying(true));
+            setIsPlaying(false);
           });
         } else {
           // Pause when it leaves viewport
@@ -58,7 +57,9 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
       }
     );
 
-    observer.observe(containerElement);
+    if (isReady) {
+      observer.observe(containerElement);
+    }
 
     return () => {
       if (containerElement) {
@@ -71,15 +72,15 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
     const videoElement = videoRef.current;
     if (videoElement) {
       if (videoElement.paused) {
+        // Unmute on manual play
+        if(videoElement.muted) {
+            videoElement.muted = false;
+        }
         videoElement.play();
         setIsPlaying(true);
       } else {
         videoElement.pause();
         setIsPlaying(false);
-      }
-      // Unmute on first manual interaction
-      if (videoElement.muted) {
-        videoElement.muted = false;
       }
     }
   };
