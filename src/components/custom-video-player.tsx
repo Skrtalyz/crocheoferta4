@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from 'react';
-import { Play, Pause } from 'lucide-react';
+import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
 
 interface CustomVideoPlayerProps {
   src: string;
@@ -12,6 +12,7 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -37,23 +38,18 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
-          // Try to play when it enters viewport
-          videoElement.muted = true; // Start muted to allow autoplay
           videoElement.play().then(() => {
             setIsPlaying(true);
           }).catch(error => {
-            // Autoplay was prevented.
-            // This is a common browser policy.
             setIsPlaying(false);
           });
         } else {
-          // Pause when it leaves viewport
           videoElement.pause();
           setIsPlaying(false);
         }
       },
       {
-        threshold: 0.5, // Start playing when 50% of the video is visible
+        threshold: 0.5,
       }
     );
 
@@ -66,16 +62,12 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
         observer.unobserve(containerElement);
       }
     };
-  }, [isReady]); // Depend on isReady to ensure video can be played
+  }, [isReady]);
 
   const togglePlayPause = () => {
     const videoElement = videoRef.current;
     if (videoElement) {
       if (videoElement.paused) {
-        // Unmute on manual play
-        if(videoElement.muted) {
-            videoElement.muted = false;
-        }
         videoElement.play();
         setIsPlaying(true);
       } else {
@@ -85,6 +77,15 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
     }
   };
 
+  const toggleMute = () => {
+    const videoElement = videoRef.current;
+    if (videoElement) {
+        videoElement.muted = !videoElement.muted;
+        setIsMuted(videoElement.muted);
+    }
+  };
+
+
   return (
     <div ref={containerRef} className="relative w-full h-full cursor-pointer" onClick={togglePlayPause}>
       <video
@@ -92,7 +93,7 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
         src={src}
         loop
         playsInline
-        muted // Start muted to allow autoplay in most browsers
+        muted={isMuted}
         className="w-full h-full object-cover"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
@@ -101,16 +102,26 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
         Seu navegador não suporta o elemento de vídeo.
       </video>
       {isReady && (
-        <div className="absolute bottom-2 left-2">
+        <div className="absolute bottom-2 left-2 flex items-center gap-2">
           <button
             onClick={(e) => {
-              e.stopPropagation(); // Prevent container click from firing
+              e.stopPropagation();
               togglePlayPause();
             }}
             className="p-2 bg-black/50 text-white rounded-full hover:bg-black/75 transition-colors focus:outline-none"
             aria-label={isPlaying ? 'Pausar' : 'Reproduzir'}
           >
             {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+          </button>
+           <button
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleMute();
+            }}
+            className="p-2 bg-black/50 text-white rounded-full hover:bg-black/75 transition-colors focus:outline-none"
+            aria-label={isMuted ? 'Ativar som' : 'Desativar som'}
+          >
+            {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
           </button>
         </div>
       )}
