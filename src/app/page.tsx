@@ -100,12 +100,12 @@ export default function CrochetLandingPage() {
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">O que você vai conquistar com a Coleção Lucre com Charme</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
               {[
-                { icon: <DollarSign className="w-10 h-10 text-primary" />, text: 'Lucro de até R$3.000/mês com peças rápidas de crochê' },
-                { icon: <Home className="w-10 h-10 text-primary" />, text: 'Prontas em menos de 1 hora, sem sair de casa ou pegar peso' },
-                { icon: <ShoppingCart className="w-10 h-10 text-primary" />, text: 'Materiais baratos e fáceis de encontrar' },
-                { icon: <Users className="w-10 h-10 text-primary" />, text: 'Receitas testadas por mais de 14 mil artesãs' },
-                { icon: <MessageCircle className="w-10 h-10 text-primary" />, text: 'Suporte exclusivo para tirar dúvidas' },
-                { icon: <Gift className="w-10 h-10 text-primary" />, text: 'Bônus: 10 ideias para embalar e vender mais' },
+                { icon: <DollarSign className="w-10 h-10 text-primary icon-metallic animate-float" />, text: 'Lucro de até R$3.000/mês com peças rápidas de crochê' },
+                { icon: <Home className="w-10 h-10 text-primary icon-metallic animate-float" />, text: 'Prontas em menos de 1 hora, sem sair de casa ou pegar peso' },
+                { icon: <ShoppingCart className="w-10 h-10 text-primary icon-metallic animate-float" />, text: 'Materiais baratos e fáceis de encontrar' },
+                { icon: <Users className="w-10 h-10 text-primary icon-metallic animate-float" />, text: 'Receitas testadas por mais de 14 mil artesãs' },
+                { icon: <MessageCircle className="w-10 h-10 text-primary icon-metallic animate-float" />, text: 'Suporte exclusivo para tirar dúvidas' },
+                { icon: <Gift className="w-10 h-10 text-primary icon-metallic animate-float" />, text: 'Bônus: 10 ideias para embalar e vender mais' },
               ].map((item, index) => (
                 <div key={index} className="flex flex-col items-center gap-4">
                   {item.icon}
