@@ -328,11 +328,11 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 container mx-auto px-4">
+        <section className="py-16 md:py-24 bg-card">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">Veja o que quem comprou está dizendo</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {detailedTestimonials.map((testimonial, index) => (
-                <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow">
+                <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow bg-background">
                     <CardContent className="p-6 text-center">
                         <Image
                             src={testimonial.avatar}
@@ -358,7 +358,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-card">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">O que as nossas alunas estão falando sobre a coleção:</h2>
                 <Carousel
@@ -369,7 +369,7 @@ export default function CrochetLandingPage() {
                         {studentComments.map((comment, index) => (
                             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                                 <div className="p-1 h-full">
-                                    <Card className="flex flex-col justify-between h-full shadow-md">
+                                    <Card className="flex flex-col justify-between h-full shadow-md bg-background">
                                         <CardContent className="p-6">
                                             <p className="italic">"{comment.quote}"</p>
                                             <p className="font-bold mt-4">- {comment.name}</p>
@@ -389,14 +389,14 @@ export default function CrochetLandingPage() {
             </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-4">⭐ Mais de 14.000 alunas satisfeitas com nota 5 estrelas</h2>
             <p className="text-lg md:text-xl mt-4">Junte-se a milhares de mulheres que já transformaram sua vida com o crochê!</p>
           </div>
         </section>
 
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-card">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-6">
                 <BadgeCheck className="w-12 h-12 text-primary icon-metallic animate-shake" />
