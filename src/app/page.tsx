@@ -119,6 +119,16 @@ const CTAButton = ({ children, className }: { children: React.ReactNode, classNa
   </Button>
 );
 
+const AnimatedGiftIcon = () => (
+  <div className="relative inline-block animate-gift-bounce">
+    <Gift className="w-10 h-10 text-white" />
+    <span className="absolute top-0 left-0 w-full h-full animate-confetti-1">🎉</span>
+    <span className="absolute top-0 left-0 w-full h-full animate-confetti-2">✨</span>
+    <span className="absolute top-0 left-0 w-full h-full animate-confetti-3">🎊</span>
+  </div>
+);
+
+
 export default function CrochetLandingPage() {
   return (
     <div className="bg-background text-foreground">
@@ -388,7 +398,10 @@ export default function CrochetLandingPage() {
 
         <section className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Oferta especial de hoje inclui um módulo extra de Amigurumi!</h2>
+             <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center justify-center gap-4">
+              <AnimatedGiftIcon />
+              <span>Oferta especial de hoje inclui um módulo extra de <strong>Amigurumi</strong>!</span>
+            </h2>
             <div className="my-8">
               <p className="text-2xl line-through opacity-70">De R$20</p>
               <p className="text-6xl md:text-7xl font-bold text-accent-foreground drop-shadow-lg bg-accent rounded-lg inline-block px-4 py-2">R$12,90</p>
