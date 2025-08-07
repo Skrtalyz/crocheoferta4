@@ -19,6 +19,7 @@ import {
   TrendingUp,
   Users,
   AlertTriangle,
+  Award,
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -32,6 +33,7 @@ import {
 } from '@/components/ui/carousel';
 import Countdown from '@/components/countdown';
 import { Progress } from '@/components/ui/progress';
+import { Badge } from '@/components/ui/badge';
 
 const testimonials = [
   {
@@ -76,6 +78,36 @@ const detailedTestimonials = [
       avatar: 'https://placehold.co/100x100.png',
       "data-ai-hint": 'woman portrait'
     }
+];
+
+const studentComments = [
+    { name: 'Carla M.', quote: 'Primeiro sousplat em 45min! Já vendi 3 por R$25 cada.' },
+    { name: 'Fernanda C.', quote: '15 peças vendidas rapidinho no Instagram!' },
+    { name: 'Juliana S.', quote: 'R$850 no primeiro mês! Técnicas incríveis.' },
+    { name: 'Roberta L.', quote: 'Lista de espera em 2 semanas!' },
+    { name: 'Amanda S.', quote: 'Iniciante total e consegui! Já encomendaram mais 5.' },
+    { name: 'Luciana R.', quote: 'Bolsa por R$45, custou R$8. Lucro garantido!' },
+    { name: 'Patrícia M.', quote: 'R$1.200 no primeiro mês trabalhando de casa!' },
+    { name: 'Mariana F.', quote: 'Clientes fixos que sempre encomendam!' },
+    { name: 'Beatriz A.', quote: 'Tapete vendido por R$80 em 1 dia!' },
+    { name: 'Camila T.', quote: 'Receitas claras, resultados rápidos!' },
+    { name: 'Renata B.', quote: 'R$2.500 em 2 meses! Mudou minha vida.' },
+    { name: 'Daniela K.', quote: 'Flores de crochê são sucesso total!' },
+    { name: 'Vanessa P.', quote: 'R$600 na primeira semana! Incrível!' },
+    { name: 'Cristina L.', quote: 'Sousplats vendendo como água!' },
+    { name: 'Mônica R.', quote: 'Técnicas fáceis, lucro garantido!' },
+    { name: 'Silvia M.', quote: 'R$1.800 em 6 semanas trabalhando em casa!' },
+    { name: 'Eliane C.', quote: 'Bolsas de praia são hit do verão!' },
+    { name: 'Rosana F.', quote: 'Lista de espera com 20 clientes!' },
+    { name: 'Tatiana B.', quote: 'R$2.200 no segundo mês! Vida mudou!' },
+    { name: 'Adriana S.', quote: 'Tapetes saindo de R$60 a R$120!' },
+    { name: 'Luciene A.', quote: 'Receitas claríssimas, sucesso total!' },
+    { name: 'Simone D.', quote: 'Flores decorativas vendendo muito!' },
+    { name: 'Regina T.', quote: 'R$950 primeira quinzena! Fantástico!' },
+    { name: 'Cláudia V.', quote: 'Encomendas não param de chegar!' },
+    { name: 'Vera L.', quote: 'Aposentada e ganhando R$1.500/mês!' },
+    { name: 'Neusa M.', quote: 'Sousplats de Natal esgotaram!' },
+    { name: 'Ivone P.', quote: 'R$3.200 em dezembro! Recorde!' },
 ];
 
 const CTAButton = ({ children, className }: { children: React.ReactNode, className?: string }) => (
@@ -303,6 +335,37 @@ export default function CrochetLandingPage() {
           <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center">
             <p className="text-muted-foreground">Seu vídeo (VSL 2) aqui</p>
           </div>
+        </section>
+
+        <section className="py-16 md:py-24">
+            <div className="container mx-auto px-4">
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">O que as nossas alunas estão falando sobre a coleção:</h2>
+                <Carousel
+                    opts={{ align: "start", loop: true }}
+                    className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
+                >
+                    <CarouselContent>
+                        {studentComments.map((comment, index) => (
+                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                                <div className="p-1 h-full">
+                                    <Card className="flex flex-col justify-between h-full shadow-md">
+                                        <CardContent className="p-6">
+                                            <p className="italic">"{comment.quote}"</p>
+                                            <p className="font-bold mt-4">- {comment.name}</p>
+                                            <Badge variant="secondary" className="mt-2 gap-1.5 pl-1.5">
+                                                <Award className="w-3.5 h-3.5 text-primary" />
+                                                Verificada
+                                            </Badge>
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="hidden sm:flex" />
+                    <CarouselNext className="hidden sm:flex" />
+                </Carousel>
+            </div>
         </section>
 
         <section className="py-16 md:py-24 bg-card">
