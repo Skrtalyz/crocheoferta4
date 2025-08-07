@@ -63,21 +63,21 @@ const detailedTestimonials = [
       name: 'Patrícia Silva',
       role: 'artesã iniciante',
       quote: 'Em uma semana fiz meu primeiro lucro com as peças da coleção. Hoje vendo direto no WhatsApp!',
-      avatar: 'https://placehold.co/100x100.png',
+      avatar: 'https://i.postimg.cc/MTYh04Dj/thispersondoesnotexist.jpg',
       "data-ai-hint": 'woman portrait'
     },
     {
       name: 'Maria Santos',
       role: 'dona de casa',
       quote: 'Consegui uma renda extra de R$ 1.200 no primeiro mês! As receitas são muito fáceis de seguir.',
-      avatar: 'https://placehold.co/100x100.png',
+      avatar: 'https://i.postimg.cc/hjKYGsB4/thispersondoesnotexist.jpg',
       "data-ai-hint": 'woman portrait'
     },
     {
       name: 'Ana Oliveira',
       role: 'microempreendedora',
       quote: 'Minha produção aumentou 300%! Agora tenho uma cartela de clientes fixos que sempre encomendam.',
-      avatar: 'https://placehold.co/100x100.png',
+      avatar: 'https://i.postimg.cc/x84ptSbq/thispersondoesnotexist.jpg',
       "data-ai-hint": 'woman portrait'
     }
 ];
