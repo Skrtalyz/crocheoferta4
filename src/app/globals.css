@@ -75,4 +75,7 @@ body {
   .text-glow {
     text-shadow: 0 0 8px hsl(var(--primary)), 0 0 20px hsl(var(--primary));
   }
+  .text-glow-gold {
+    text-shadow: 0 0 8px #FFD700, 0 0 20px #FFD700;
+  }
 }
