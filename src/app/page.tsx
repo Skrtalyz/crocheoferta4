@@ -219,22 +219,22 @@ export default function CrochetLandingPage() {
               {[
                 {
                   title: '🧶 Tapetes, Sousplats, Flores e Itens de Decoração',
-                  image: 'https://placehold.co/600x400.png',
+                  image: 'https://i.postimg.cc/B65M20Mx/d5c6fffe2bb90b536df15e12bd613fe8.webp',
                   'data-ai-hint': 'crochet decor',
                 },
                 {
                   title: '👗 Roupas e Acessórios com Acabamento Profissional',
-                  image: 'https://placehold.co/600x400.png',
+                  image: 'https://i.postimg.cc/KvpQPQrs/39261505-866252356906521-538257078335045632-n.jpg',
                   'data-ai-hint': 'crochet clothes',
                 },
                 {
                   title: '⚡ Técnicas Rápidas de Produção e Fio Econômico',
-                  image: 'https://placehold.co/600x400.png',
+                  image: 'https://i.postimg.cc/63KhWPtT/sousplat-crochet-fio-de-malha-sousplat.webp',
                   'data-ai-hint': 'crochet techniques',
                 },
                 {
                   title: '🎁 Peças Temáticas para Natal, Dia das Mães e mais',
-                  image: 'https://placehold.co/600x400.png',
+                  image: 'https://i.postimg.cc/zBkFVkG7/guirlanda-de-natal-de-croche-674x674.jpg',
                   'data-ai-hint': 'crochet gifts',
                 },
               ].map((item, index) => (
@@ -256,7 +256,7 @@ export default function CrochetLandingPage() {
               <Card className="md:col-span-2 lg:col-span-3 bg-primary text-primary-foreground p-8 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-6">
                 <div className='flex-shrink-0'>
                   <Image
-                    src="https://placehold.co/400x400.png"
+                    src="https://i.postimg.cc/tCctZJpK/minibundel3-compressed.webp"
                     alt="Bônus Amigurumi"
                     width={150}
                     height={150}
