@@ -145,16 +145,62 @@ export default function CrochetLandingPage() {
         <section className="py-16 md:py-24 bg-card">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-12">O que você vai aprender</h2>
-            <div className="max-w-2xl mx-auto text-left space-y-4 text-lg">
-                <p>🧶 Tapetes, Sousplats, Flores e Itens de Decoração</p>
-                <p>👗 Roupas e Acessórios com Acabamento Profissional</p>
-                <p>⚡ Técnicas Rápidas de Produção e Fio Econômico</p>
-                <p>🎁 Peças Temáticas para Natal, Dia das Mães e mais</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: '🧶 Tapetes, Sousplats, Flores e Itens de Decoração',
+                  image: 'https://placehold.co/600x400.png',
+                  'data-ai-hint': 'crochet decor',
+                },
+                {
+                  title: '👗 Roupas e Acessórios com Acabamento Profissional',
+                  image: 'https://placehold.co/600x400.png',
+                  'data-ai-hint': 'crochet clothes',
+                },
+                {
+                  title: '⚡ Técnicas Rápidas de Produção e Fio Econômico',
+                  image: 'https://placehold.co/600x400.png',
+                  'data-ai-hint': 'crochet techniques',
+                },
+                {
+                  title: '🎁 Peças Temáticas para Natal, Dia das Mães e mais',
+                  image: 'https://placehold.co/600x400.png',
+                  'data-ai-hint': 'crochet gifts',
+                },
+              ].map((item, index) => (
+                <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={600}
+                    height={400}
+                    className="w-full h-48 object-cover"
+                    data-ai-hint={item['data-ai-hint']}
+                  />
+                  <CardContent className="p-4 pt-4">
+                    <p className="font-semibold text-lg">{item.title}</p>
+                  </CardContent>
+                </Card>
+              ))}
+
+              <Card className="md:col-span-2 lg:col-span-3 bg-primary text-primary-foreground p-8 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-6">
+                <div className='flex-shrink-0'>
+                  <Image
+                    src="https://placehold.co/400x400.png"
+                    alt="Bônus Amigurumi"
+                    width={150}
+                    height={150}
+                    className="rounded-lg object-cover"
+                    data-ai-hint="amigurumi crochet"
+                  />
+                </div>
+                <div className='text-center md:text-left'>
+                  <h3 className="font-bold text-2xl mb-2">BÔNUS: Inicie no Amigurumi!</h3>
+                  <p>Aprenda a fazer bichinhos e bonequinhos de crochê — um sucesso de vendas como presente e decoração.</p>
+                </div>
+              </Card>
+
             </div>
-            <Card className="mt-12 bg-primary text-primary-foreground p-8 rounded-2xl max-w-3xl mx-auto shadow-2xl">
-              <h3 className="font-bold text-2xl mb-2">BÔNUS: Inicie no Amigurumi!</h3>
-              <p>Aprenda a fazer bichinhos e bonequinhos de crochê — um sucesso de vendas como presente e decoração.</p>
-            </Card>
           </div>
         </section>
 
