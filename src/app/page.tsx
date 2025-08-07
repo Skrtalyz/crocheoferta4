@@ -297,6 +297,13 @@ export default function CrochetLandingPage() {
                 ))}
             </div>
         </section>
+        
+        <section className="py-16 md:py-24 text-center container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">Assista e descubra como é fácil começar</h2>
+          <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center">
+            <p className="text-muted-foreground">Seu vídeo (VSL 2) aqui</p>
+          </div>
+        </section>
 
         <section className="py-16 md:py-24 bg-card">
           <div className="container mx-auto px-4">
