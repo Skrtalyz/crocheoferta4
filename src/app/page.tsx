@@ -378,7 +378,7 @@ export default function CrochetLandingPage() {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-6">
-                <BadgeCheck className="w-12 h-12 text-primary" />
+                <BadgeCheck className="w-12 h-12 text-primary icon-metallic animate-shake" />
             </div>
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Garantia de 7 dias ou seu dinheiro de volta</h2>
             <p className="text-lg text-muted-foreground mb-6">Garanta sua coleção sem risco. Se não gostar, devolvemos seu dinheiro.</p>
