@@ -404,7 +404,7 @@ export default function CrochetLandingPage() {
             </h2>
             <div className="my-8">
               <p className="text-2xl line-through opacity-70">De R$20</p>
-              <p className="text-6xl md:text-7xl font-bold text-accent-foreground drop-shadow-lg bg-accent rounded-lg inline-block px-4 py-2">R$12,90</p>
+              <p className="text-6xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg text-glow-gold">R$12,90</p>
               <p className="text-xl mt-2 font-semibold">Pagamento único, acesso vitalício</p>
             </div>
             <CTAButton className="bg-green-600 hover:bg-green-700 text-white">
