@@ -54,6 +54,30 @@ const testimonials = [
   },
 ];
 
+const detailedTestimonials = [
+    {
+      name: 'Patrícia Silva',
+      role: 'artesã iniciante',
+      quote: 'Em uma semana fiz meu primeiro lucro com as peças da coleção. Hoje vendo direto no WhatsApp!',
+      avatar: 'https://placehold.co/100x100.png',
+      "data-ai-hint": 'woman portrait'
+    },
+    {
+      name: 'Maria Santos',
+      role: 'dona de casa',
+      quote: 'Consegui uma renda extra de R$ 1.200 no primeiro mês! As receitas são muito fáceis de seguir.',
+      avatar: 'https://placehold.co/100x100.png',
+      "data-ai-hint": 'woman portrait'
+    },
+    {
+      name: 'Ana Oliveira',
+      role: 'microempreendedora',
+      quote: 'Minha produção aumentou 300%! Agora tenho uma cartela de clientes fixos que sempre encomendam.',
+      avatar: 'https://placehold.co/100x100.png',
+      "data-ai-hint": 'woman portrait'
+    }
+];
+
 const CTAButton = ({ children, className }: { children: React.ReactNode, className?: string }) => (
   <Button
     size="lg"
@@ -249,6 +273,29 @@ export default function CrochetLandingPage() {
                 </div>
             </div>
           </div>
+        </section>
+
+        <section className="py-16 md:py-24 container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">Veja o que quem comprou está dizendo</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {detailedTestimonials.map((testimonial, index) => (
+                <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow">
+                    <CardContent className="p-6 text-center">
+                        <Image
+                            src={testimonial.avatar}
+                            alt={`Avatar de ${testimonial.name}`}
+                            width={100}
+                            height={100}
+                            className="rounded-full mb-4 mx-auto border-4 border-primary/20"
+                            data-ai-hint={testimonial['data-ai-hint']}
+                        />
+                        <p className="font-bold text-lg font-headline">{testimonial.name}</p>
+                        <p className="text-sm text-primary font-semibold mb-4">{testimonial.role}</p>
+                        <p className="italic">"{testimonial.quote}"</p>
+                    </CardContent>
+                </Card>
+                ))}
+            </div>
         </section>
 
         <section className="py-16 md:py-24 bg-card">
