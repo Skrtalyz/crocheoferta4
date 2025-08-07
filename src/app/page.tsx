@@ -79,7 +79,7 @@ export default function CrochetLandingPage() {
       <main>
         <section className="py-16 md:py-24 text-center container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold mb-4 leading-tight">
-            Transforme crochê em até <span className="text-glow-gold uppercase">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
+            Transforme crochê em até <span className="uppercase font-bold text-glow">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
           </h1>
           <p className="max-w-3xl mx-auto text-lg md:text-xl mb-8">
             O curso definitivo para mulheres que querem transformar sua paixão por crochê em uma fonte de renda estável e prazerosa — mesmo que nunca tenham vendido antes!
@@ -205,22 +205,22 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-primary/5">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-orange-500 to-red-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <div className="max-w-3xl mx-auto bg-destructive/10 border-2 border-dashed border-destructive/50 p-6 rounded-2xl relative">
+            <div className="max-w-3xl mx-auto bg-white/10 border-2 border-dashed border-white/50 p-6 rounded-2xl relative">
               <div className="absolute -top-3 -left-3 text-2xl animate-pulse">⚠️</div>
               <div className="absolute -bottom-3 -left-3 text-2xl animate-pulse delay-500">⚠️</div>
               <div className="absolute -top-3 -right-3 text-2xl animate-pulse delay-300">⚠️</div>
               <div className="absolute -bottom-3 -right-3 text-2xl animate-pulse delay-700">⚠️</div>
 
-              <h2 className="text-3xl font-bold text-destructive flex items-center justify-center gap-2">
+              <h2 className="text-3xl font-bold flex items-center justify-center gap-2">
                 <AlertTriangle className="w-8 h-8" />
                 VAGAS LIMITADAS!
               </h2>
-              <p className="text-lg text-foreground font-semibold mt-4">
+              <p className="text-lg font-semibold mt-4">
                 Liberamos apenas 10 acessos promocionais por semana para garantir a qualidade no suporte.
               </p>
-              <div className="mt-4 bg-accent/20 text-accent-foreground py-2 px-4 rounded-md">
+              <div className="mt-4 bg-white/20 py-2 px-4 rounded-md">
                 <p className="font-bold">Após isso, o valor volta ao preço original.</p>
               </div>
             </div>
@@ -229,17 +229,17 @@ export default function CrochetLandingPage() {
                 SIM! QUERO A COLEÇÃO LUCRE COM CHARME POR R$12,90
               </CTAButton>
             </div>
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto text-foreground/80">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto text-white/80">
                 <div className="flex flex-col items-center gap-2">
-                  <CheckCircle className="w-8 h-8 text-primary"/>
+                  <CheckCircle className="w-8 h-8 text-white"/>
                   <span className="font-semibold">Garantia de 7 dias</span>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <Lock className="w-8 h-8 text-primary"/>
+                  <Lock className="w-8 h-8 text-white"/>
                   <span className="font-semibold">Pagamento 100% seguro</span>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <MessageCircle className="w-8 h-8 text-primary"/>
+                  <MessageCircle className="w-8 h-8 text-white"/>
                   <span className="font-semibold">Suporte via WhatsApp</span>
                 </div>
             </div>
