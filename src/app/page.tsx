@@ -160,13 +160,6 @@ export default function CrochetLandingPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-black mb-4 leading-tight">
             Transforme crochê em até <span className="uppercase text-yellow-400 text-glow-subtle">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
           </h1>
-          <p className="max-w-3xl mx-auto text-lg md:text-xl mb-8 font-medium">
-            O curso definitivo para mulheres que querem transformar sua paixão por crochê em uma fonte de renda estável e prazerosa — mesmo que nunca tenham vendido antes!
-          </p>
-          <div className="my-8">
-            <p className="font-bold text-xl uppercase mb-2">ASSISTA O VÍDEO ABAIXO COMPLETO E DESCUBRA COMO!</p>
-            <ArrowDown className="w-8 h-8 mx-auto animate-bounce text-primary" />
-          </div>
           <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center">
             <p className="text-muted-foreground">Seu vídeo (VSL) aqui</p>
           </div>
