@@ -363,36 +363,28 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
-            <div className="container mx-auto px-4">
-                <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que as nossas alunas estão falando sobre a coleção:</h2>
-                <Carousel
-                    plugins={[Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })]}
-                    opts={{ align: "start", loop: true }}
-                    className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
-                >
-                    <CarouselContent>
-                        {studentComments.map((comment, index) => (
-                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                                <div className="p-1 h-full">
-                                    <Card className="flex flex-col justify-between h-full shadow-md bg-background">
-                                        <CardContent className="p-6">
-                                            <p className="italic">"{comment.quote}"</p>
-                                            <p className="font-bold mt-4">- {comment.name}</p>
-                                            <Badge variant="secondary" className="mt-2 gap-1.5 pl-1.5">
-                                                <Award className="w-3.5 h-3.5 text-primary" />
-                                                Verificada
-                                            </Badge>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="hidden sm:flex" />
-                    <CarouselNext className="hidden sm:flex" />
-                </Carousel>
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary overflow-hidden">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que as nossas alunas estão falando sobre a coleção:</h2>
+            <div className="relative flex overflow-x-hidden group">
+              <div className="flex animate-marquee group-hover:pause">
+                {[...studentComments, ...studentComments].map((comment, index) => (
+                  <div key={index} className="flex-shrink-0 w-80 mx-4">
+                    <Card className="flex flex-col justify-between h-full shadow-md bg-background">
+                      <CardContent className="p-6">
+                        <p className="italic">"{comment.quote}"</p>
+                        <p className="font-bold mt-4">- {comment.name}</p>
+                        <Badge variant="secondary" className="mt-2 gap-1.5 pl-1.5">
+                          <Award className="w-3.5 h-3.5 text-primary" />
+                          Verificada
+                        </Badge>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </div>
             </div>
+          </div>
         </section>
 
         <section className="py-16 md:py-24 bg-background">
