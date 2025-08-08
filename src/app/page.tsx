@@ -164,8 +164,8 @@ export default function CrochetLandingPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-black mb-4 leading-tight">
             Transforme crochê em até <span className="uppercase text-yellow-400 text-glow-subtle">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
           </h1>
-          <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center">
-            <p className="text-muted-foreground">Seu vídeo (VSL) aqui</p>
+          <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center overflow-hidden">
+            <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/ydrm3yopqjbbvqn3gheuf/VSL-EDITADA-Feito-com-o-Clipchamp.mp4?rlkey=65x3ew3e3kwyyym3m0gfq8nd3&st=5t9hgnv8&raw=1" />
           </div>
           <CTAButton href="#oferta" className="bg-green-600 hover:bg-green-700 text-white font-bold">
             👉 QUERO RECEBER O CURSO POR R$12,90
@@ -438,5 +438,7 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
+
+    
 
     
