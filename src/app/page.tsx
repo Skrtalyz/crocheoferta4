@@ -131,9 +131,9 @@ const CTAButton = ({ children, className, href }: { children: React.ReactNode, c
 const AnimatedGiftIcon = () => (
   <div className="relative inline-block animate-gift-bounce">
     <Gift className="w-10 h-10 text-white" />
-    <span className="absolute top-0 left-0 w-full h-full animate-confetti-1">🎉</span>
+    <span className="absolute top-0 left-0 w-full h-full animate-confetti-1">🎊</span>
     <span className="absolute top-0 left-0 w-full h-full animate-confetti-2">✨</span>
-    <span className="absolute top-0 left-0 w-full h-full animate-confetti-3">🎊</span>
+    <span className="absolute top-0 left-0 w-full h-full animate-confetti-3">🎉</span>
   </div>
 );
 
@@ -355,6 +355,13 @@ export default function CrochetLandingPage() {
           <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Assista e descubra como é fácil começar</h2>
           <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center overflow-hidden">
             <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/sjbm84rv3u3wv4ctto1gm/depoimento-croche-Feito-com-o-Clipchamp.mp4?rlkey=anb51i9lu0ln3pjlcuiazfdnx&st=5tfv32ex&raw=1" />
+          </div>
+        </section>
+
+        <section className="py-16 md:py-24 text-center container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Veja o que minhas 3 melhores alunas estão dizendo:</h2>
+          <div className="my-8 aspect-video bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center overflow-hidden">
+            <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/jk0tlvc61u0b25uqs5ay9/V-deo-sem-t-tulo-Feito-com-o-Clipchamp-1.mp4?rlkey=u313e9yqexev6v19xlc5wxtex&st=vjncrnf0&raw=1" />
           </div>
         </section>
 
