@@ -38,6 +38,7 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import CustomVideoPlayer from '@/components/custom-video-player';
 import { cn } from '@/lib/utils';
+import CurrentDate from '@/components/current-date';
 
 const testimonials = [
   {
@@ -145,7 +146,7 @@ export default function CrochetLandingPage() {
     <div className="bg-background text-foreground font-body">
       <header className="bg-accent text-accent-foreground text-center p-3 font-bold text-sm md:text-base animate-pulse">
         <div className="container mx-auto flex flex-wrap items-center justify-center gap-x-2">
-          <span>CUPOM DE DESCONTO APLICADO — VÁLIDO ATÉ HOJE 07/08/2025 🔥</span>
+          <span>CUPOM DE DESCONTO APLICADO — VÁLIDO ATÉ HOJE <CurrentDate /> 🔥</span>
           <span className="hidden md:inline">|</span>
           <div className="flex items-center gap-2">
             <span>OFERTA ACABA EM</span>
