@@ -1,4 +1,6 @@
 
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,6 +25,8 @@ import {
   AlertTriangle,
   Award,
 } from 'lucide-react';
+
+import Autoplay from 'embla-carousel-autoplay';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -363,6 +367,7 @@ export default function CrochetLandingPage() {
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que as nossas alunas estão falando sobre a coleção:</h2>
                 <Carousel
+                    plugins={[Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })]}
                     opts={{ align: "start", loop: true }}
                     className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
                 >
