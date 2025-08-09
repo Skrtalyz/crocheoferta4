@@ -53,7 +53,7 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src, poster }) =>
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         preload="metadata"
-        poster={poster || "https://placehold.co/600x400.png"}
+        poster={poster}
         data-ai-hint="video loading"
       >
         Seu navegador não suporta o elemento de vídeo.
