@@ -12,8 +12,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Crochet Cashflow',
+  title: 'COMO GANHAR DINHEIRO COM CROCHE',
   description: 'Transforme seu hobby em renda com nosso curso de crochê.',
+  icons: {
+    icon: [],
+  },
 };
 
 export default function RootLayout({
