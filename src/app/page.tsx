@@ -438,7 +438,3 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
-
-    
-
-    

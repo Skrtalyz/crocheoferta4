@@ -54,7 +54,7 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src, poster }) =>
         onPause={() => setIsPlaying(false)}
         preload="metadata"
         poster={poster}
-        data-ai-hint="video loading"
+        data-ai-hint={poster ? "video loading" : ""}
       >
         Seu navegador não suporta o elemento de vídeo.
       </video>
@@ -91,5 +91,3 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src, poster }) =>
 };
 
 export default CustomVideoPlayer;
-
-    
