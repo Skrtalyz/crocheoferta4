@@ -51,11 +51,13 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
         className="w-full h-full object-cover"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
-        preload="auto"
+        preload="metadata"
+        poster="https://placehold.co/600x400.png"
+        data-ai-hint="video loading"
       >
         Seu navegador não suporta o elemento de vídeo.
       </video>
-      {isReady && !isPlaying && (
+      {!isPlaying && (
         <div className="absolute inset-0 flex items-center justify-center bg-black/30">
           <button
             onClick={(e) => {
@@ -69,7 +71,7 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
           </button>
         </div>
       )}
-      {isReady && isPlaying && (
+      {isPlaying && (
          <div className="absolute bottom-2 left-2 flex items-center gap-2">
          <button
            onClick={(e) => {
