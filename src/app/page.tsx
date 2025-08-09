@@ -165,7 +165,7 @@ export default function CrochetLandingPage() {
             Transforme crochê em até <span className="uppercase text-yellow-400 text-glow-subtle">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
           </h1>
           <div className="my-8 bg-muted max-w-sm mx-auto rounded-lg flex items-center justify-center overflow-hidden">
-            <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/ydrm3yopqjbbvqn3gheuf/VSL-EDITADA-Feito-com-o-Clipchamp.mp4?rlkey=65x3ew3e3kwyyym3m0gfq8nd3&st=5t9hgnv8&raw=1" />
+            <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/ydrm3yopqjbbvqn3gheuf/VSL-EDITADA-Feito-com-o-Clipchamp.mp4?rlkey=65x3ew3e3kwyyym3m0gfq8nd3&st=5t9hgnv8&raw=1" poster="https://i.postimg.cc/0202bbqZ/Captura-de-tela-2025-07-31-115231.png" />
           </div>
           <CTAButton href="#oferta" className="bg-green-600 hover:bg-green-700 text-white font-bold">
             👉 QUERO RECEBER O CURSO POR R$12,90
@@ -438,5 +438,7 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
+
+    
 
     

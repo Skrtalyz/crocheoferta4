@@ -6,9 +6,10 @@ import { Play, Pause } from 'lucide-react';
 
 interface CustomVideoPlayerProps {
   src: string;
+  poster?: string;
 }
 
-const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
+const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src, poster }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isReady, setIsReady] = useState(false);
@@ -52,7 +53,7 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         preload="metadata"
-        poster="https://placehold.co/600x400.png"
+        poster={poster || "https://placehold.co/600x400.png"}
         data-ai-hint="video loading"
       >
         Seu navegador não suporta o elemento de vídeo.
@@ -90,3 +91,5 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src }) => {
 };
 
 export default CustomVideoPlayer;
+
+    
