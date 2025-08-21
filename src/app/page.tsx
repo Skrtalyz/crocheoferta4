@@ -175,9 +175,6 @@ export default function CrochetLandingPage() {
                 <p className="text-lg text-muted-foreground mb-8">
                   Receba uma coleção completa com as peças mais vendidas, explicadas em vídeo-aulas curtas e passo a passo, criadas para quem é totalmente iniciante.
                 </p>
-                <div className="my-8 bg-muted max-w-sm mx-auto md:mx-0 rounded-lg flex items-center justify-center overflow-hidden shadow-lg">
-                  <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/ydrm3yopqjbbvqn3gheuf/VSL-EDITADA-Feito-com-o-Clipchamp.mp4?rlkey=65x3ew3e3kwyyym3m0gfq8nd3&st=5t9hgnv8&raw=1" poster="https://i.postimg.cc/0202bbqZ/Captura-de-tela-2025-07-31-115231.png" />
-                </div>
                 <Link href="#oferta" className="w-full max-w-sm mx-auto md:mx-0">
                   <Button
                     size="lg"
