@@ -418,12 +418,6 @@ export default function CrochetLandingPage() {
             <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
               QUERO COMEÇAR AGORA
             </CTAButton>
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm max-w-3xl mx-auto">
-              <div className="flex items-center justify-center gap-2"><CreditCard /> Pagamento 100% seguro</div>
-              <div className="flex items-center justify-center gap-2">❖ PIX disponível</div>
-              <div className="flex items-center justify-center gap-2"><Lock /> Ambiente protegido</div>
-              <div className="flex items-center justify-center gap-2"><CheckCircle /> Garantia de satisfação</div>
-            </div>
           </div>
         </section>
 
