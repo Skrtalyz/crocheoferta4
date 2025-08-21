@@ -231,6 +231,16 @@ export default function CrochetLandingPage() {
               </Card>
             ))}
           </div>
+          <div className="mt-12 flex justify-center">
+            <Link href="#oferta">
+              <Button
+                size="lg"
+                className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
+              >
+                QUERO APRENDER
+              </Button>
+            </Link>
+          </div>
         </section>
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
