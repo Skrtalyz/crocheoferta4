@@ -180,7 +180,7 @@ export default function CrochetLandingPage() {
                     size="lg"
                     className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
                   >
-                    QUERO RECEBER O CURSO POR R$12,90
+                    QUERO RECEBER O CURSO
                   </Button>
                 </Link>
               </div>
