@@ -262,7 +262,7 @@ export default function CrochetLandingPage() {
               {[
                 {
                   title: '🧶 Tapetes, Sousplats, Flores e Itens de Decoração',
-                  image: 'https://i.postimg.cc/hPpyfjhZ/1.png',
+                  image: 'https://i.postimg.cc/m2HkrcdB/1.png',
                   'data-ai-hint': 'crochet decor',
                 },
                 {
