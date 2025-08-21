@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 const colors = require('tailwindcss/colors');
 
@@ -16,6 +17,7 @@ export default {
         code: ['monospace'],
       },
       colors: {
+        gray: colors.gray,
         orange: colors.orange,
         red: colors.red,
         background: 'hsl(var(--background))',
@@ -90,3 +92,5 @@ export default {
   },
   plugins: [require('tailwindcss-animate')],
 } satisfies Config;
+
+    

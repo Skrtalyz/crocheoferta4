@@ -24,6 +24,8 @@ import {
   Users,
   AlertTriangle,
   Award,
+  BookOpen,
+  ArrowRight
 } from 'lucide-react';
 
 import Autoplay from 'embla-carousel-autoplay';
@@ -160,16 +162,45 @@ export default function CrochetLandingPage() {
       </header>
 
       <main>
-        <section className="py-16 md:py-24 text-center container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-black mb-4 leading-tight">
-            Transforme crochê em até <span className="uppercase text-yellow-400 text-glow-subtle">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
-          </h1>
-          <div className="my-8 bg-muted max-w-sm mx-auto rounded-lg flex items-center justify-center overflow-hidden">
-            <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/ydrm3yopqjbbvqn3gheuf/VSL-EDITADA-Feito-com-o-Clipchamp.mp4?rlkey=65x3ew3e3kwyyym3m0gfq8nd3&st=5t9hgnv8&raw=1" poster="https://i.postimg.cc/0202bbqZ/Captura-de-tela-2025-07-31-115231.png" />
+        <section className="bg-gray-900 text-white relative">
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
+          <div className="container mx-auto px-4 py-16 md:py-24 relative z-20">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="text-center md:text-left">
+                 <div className="inline-block bg-white/10 p-2 rounded-lg mb-6">
+                    <BookOpen className="w-8 h-8 text-primary" />
+                 </div>
+                <h1 className="text-4xl md:text-5xl font-headline font-black uppercase leading-tight mb-4">
+                  Transforme crochê em até <span className="text-primary">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
+                </h1>
+                <p className="text-lg text-gray-300 mb-8">
+                  Receba uma coleção completa com as peças mais vendidas, explicadas em vídeo-aulas curtas e passo a passo, criadas para quem é totalmente iniciante.
+                </p>
+                <div className="my-8 bg-muted max-w-sm mx-auto md:mx-0 rounded-lg flex items-center justify-center overflow-hidden shadow-lg">
+                  <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/ydrm3yopqjbbvqn3gheuf/VSL-EDITADA-Feito-com-o-Clipchamp.mp4?rlkey=65x3ew3e3kwyyym3m0gfq8nd3&st=5t9hgnv8&raw=1" poster="https://i.postimg.cc/0202bbqZ/Captura-de-tela-2025-07-31-115231.png" />
+                </div>
+                <Link href="#oferta" className="w-full max-w-sm mx-auto md:mx-0">
+                  <Button
+                    size="lg"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
+                  >
+                    QUERO RECEBER O CURSO POR R$12,90
+                    <ArrowRight className="ml-2" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="hidden md:block">
+                <Image
+                  src="https://placehold.co/600x800.png"
+                  alt="Mulher sorrindo com artesanato de crochê"
+                  width={600}
+                  height={800}
+                  className="rounded-lg shadow-2xl object-cover w-full h-full"
+                  data-ai-hint="woman smiling crochet"
+                />
+              </div>
+            </div>
           </div>
-          <CTAButton href="#oferta" className="bg-green-600 hover:bg-green-700 text-white font-bold">
-            👉 QUERO RECEBER O CURSO POR R$12,90
-          </CTAButton>
         </section>
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
@@ -438,3 +469,5 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
+
+    
