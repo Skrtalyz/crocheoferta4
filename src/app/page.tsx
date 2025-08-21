@@ -411,12 +411,12 @@ export default function CrochetLandingPage() {
               <span>Oferta especial de hoje inclui um módulo extra de <strong>Amigurumi</strong>!</span>
             </h2>
             <div className="my-8">
-              <p className="text-2xl line-through opacity-70">De R$20</p>
-              <p className="text-6xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg text-glow-gold">R$12,90</p>
+              <p className="text-2xl line-through opacity-70">De R$35</p>
+              <p className="text-6xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg text-glow-gold">R$24,90</p>
               <p className="text-xl mt-2 font-semibold">Pagamento único, acesso vitalício</p>
             </div>
             <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
-              QUERO COMEÇAR AGORA POR R$12,90
+              QUERO COMEÇAR AGORA POR R$24,90
             </CTAButton>
             <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm max-w-3xl mx-auto">
               <div className="flex items-center justify-center gap-2"><CreditCard /> Pagamento 100% seguro</div>
