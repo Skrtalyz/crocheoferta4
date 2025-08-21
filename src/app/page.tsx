@@ -352,7 +352,7 @@ export default function CrochetLandingPage() {
             </div>
             <div className="mt-8">
               <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
-                SIM! QUERO A COLEÇÃO LUCRE COM CHARME POR R$12,90
+                SIM! QUERO A COLEÇÃO LUCRE COM CHARME
               </CTAButton>
             </div>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto text-white/80">
