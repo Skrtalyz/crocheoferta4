@@ -186,7 +186,7 @@ export default function CrochetLandingPage() {
               </div>
               <div className="hidden md:block">
                 <Image
-                  src="https://placehold.co/600x800.png"
+                  src="https://i.postimg.cc/WzgYf675/Design-sem-nome-1.png"
                   alt="Mulher sorrindo com artesanato de crochê"
                   width={600}
                   height={800}
