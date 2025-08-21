@@ -141,7 +141,7 @@ export default function CrochetLandingPage() {
         <section className="relative">
           <div className="container mx-auto px-4 py-16 md:py-24">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="block md:hidden mb-8">
+              <div className="block md:hidden mb-8 max-w-sm mx-auto">
                 <Image
                   src="https://i.postimg.cc/WzgYf675/Design-sem-nome-1.png"
                   alt="Mulher sorrindo com artesanato de crochê"
