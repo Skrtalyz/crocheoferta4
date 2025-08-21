@@ -285,8 +285,8 @@ export default function CrochetLandingPage() {
                   <Image
                     src={item.image}
                     alt={item.title}
-                    width={600}
-                    height={400}
+                    width={100}
+                    height={100}
                     className="w-full h-48 object-cover"
                     data-ai-hint={item['data-ai-hint']}
                   />
@@ -301,8 +301,8 @@ export default function CrochetLandingPage() {
                   <Image
                     src="https://i.postimg.cc/tCctZJpK/minibundel3-compressed.webp"
                     alt="Bônus Amigurumi"
-                    width={150}
-                    height={150}
+                    width={100}
+                    height={100}
                     className="rounded-lg object-cover"
                     data-ai-hint="amigurumi crochet"
                   />
