@@ -285,8 +285,8 @@ export default function CrochetLandingPage() {
                   <Image
                     src={item.image}
                     alt={item.title}
-                    width={100}
-                    height={100}
+                    width={313}
+                    height={313}
                     className="w-full h-48 object-cover"
                     data-ai-hint={item['data-ai-hint']}
                   />
