@@ -352,7 +352,7 @@ export default function CrochetLandingPage() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Veja o que minhas alunas estão dizendo sobre:</h2>
             <div className="max-w-2xl mx-auto">
-              <div className="aspect-video overflow-hidden rounded-lg shadow-2xl">
+              <div className="overflow-hidden rounded-lg shadow-2xl">
                 <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/y2m4gpjhpbgoi46fggvw2/Depoimentos-24-90-Feito-com-o-Clipchamp-3.mp4?rlkey=oipxlrt3lojq7ek7jyd04ew9j&st=x9ab4gpn&raw=1" />
               </div>
             </div>
@@ -434,5 +434,3 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
-
-    
