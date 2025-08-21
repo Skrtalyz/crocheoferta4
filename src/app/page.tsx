@@ -262,22 +262,22 @@ export default function CrochetLandingPage() {
               {[
                 {
                   title: '🧶 Tapetes, Sousplats, Flores e Itens de Decoração',
-                  image: 'https://i.postimg.cc/B65M20Mx/d5c6fffe2bb90b536df15e12bd613fe8.webp',
+                  image: 'https://i.postimg.cc/sx0j2zWB/1.png',
                   'data-ai-hint': 'crochet decor',
                 },
                 {
                   title: '👗 Roupas e Acessórios com Acabamento Profissional',
-                  image: 'https://i.postimg.cc/KvpQPQrs/39261505-866252356906521-538257078335045632-n.jpg',
+                  image: 'https://i.postimg.cc/KYrmMBLh/2.png',
                   'data-ai-hint': 'crochet clothes',
                 },
                 {
                   title: '⚡ Técnicas Rápidas de Produção e Fio Econômico',
-                  image: 'https://i.postimg.cc/63KhWPtT/sousplat-crochet-fio-de-malha-sousplat.webp',
+                  image: 'https://i.postimg.cc/rszT3HHq/3.png',
                   'data-ai-hint': 'crochet techniques',
                 },
                 {
                   title: '🎁 Peças Temáticas para Natal, Dia das Mães e mais',
-                  image: 'https://i.postimg.cc/zBkFVkG7/guirlanda-de-natal-de-croche-674x674.jpg',
+                  image: 'https://i.postimg.cc/xTJYPWHR/4.png',
                   'data-ai-hint': 'crochet gifts',
                 },
               ].map((item, index) => (
