@@ -151,14 +151,16 @@ export default function CrochetLandingPage() {
                 <p className="text-lg text-muted-foreground mb-8">
                   Receba uma coleção completa com as peças mais vendidas, explicadas em vídeo-aulas curtas e passo a passo, criadas para quem é totalmente iniciante.
                 </p>
-                <Link href="#oferta" className="w-full max-w-sm mx-auto md:mx-0">
-                  <Button
-                    size="lg"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
-                  >
-                    QUERO RECEBER O CURSO
-                  </Button>
-                </Link>
+                <div className="flex justify-center md:justify-start">
+                  <Link href="#oferta">
+                    <Button
+                      size="lg"
+                      className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
+                    >
+                      QUERO RECEBER O CURSO
+                    </Button>
+                  </Link>
+                </div>
               </div>
               <div className="hidden md:block">
                 <Image
@@ -389,13 +391,6 @@ export default function CrochetLandingPage() {
                 ))}
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-4">⭐ Mais de 14.000 alunas satisfeitas com nota 5 estrelas</h2>
-            <p className="text-lg md:text-xl mt-4">Junte-se a milhares de mulheres que já transformaram sua vida com o crochê!</p>
           </div>
         </section>
 
