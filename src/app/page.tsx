@@ -356,6 +356,16 @@ export default function CrochetLandingPage() {
                 <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/y2m4gpjhpbgoi46fggvw2/Depoimentos-24-90-Feito-com-o-Clipchamp-3.mp4?rlkey=oipxlrt3lojq7ek7jyd04ew9j&st=x9ab4gpn&raw=1" />
               </div>
             </div>
+            <div className="mt-12 flex justify-center">
+               <Link href="#oferta">
+                  <Button
+                    size="lg"
+                    className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
+                  >
+                    QUERO SER A PRÓXIMA
+                  </Button>
+                </Link>
+            </div>
           </div>
         </section>
 
@@ -433,5 +443,3 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
-
-    
