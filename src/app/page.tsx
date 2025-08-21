@@ -267,17 +267,17 @@ export default function CrochetLandingPage() {
                 },
                 {
                   title: '👗 Roupas e Acessórios com Acabamento Profissional',
-                  image: 'https://i.postimg.cc/KYrmMBLh/2.png',
+                  image: 'https://i.postimg.cc/hGdhXX49/2.png',
                   'data-ai-hint': 'crochet clothes',
                 },
                 {
                   title: '⚡ Técnicas Rápidas de Produção e Fio Econômico',
-                  image: 'https://i.postimg.cc/rszT3HHq/3.png',
+                  image: 'https://i.postimg.cc/YSYqpT8R/3.png',
                   'data-ai-hint': 'crochet techniques',
                 },
                 {
                   title: '🎁 Peças Temáticas para Natal, Dia das Mães e mais',
-                  image: 'https://i.postimg.cc/xTJYPWHR/4.png',
+                  image: 'https://i.postimg.cc/8CRN8MPn/4.png',
                   'data-ai-hint': 'crochet gifts',
                 },
               ].map((item, index) => (
