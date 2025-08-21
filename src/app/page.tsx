@@ -126,100 +126,100 @@ export default function CrochetLandingPage() {
 
   return (
     <div className="bg-background text-foreground font-body">
-      <div className="max-w-7xl mx-auto">
-        <header className="bg-accent text-accent-foreground text-center p-3 font-bold text-sm md:text-base animate-pulse">
-          <div className="container mx-auto flex flex-wrap items-center justify-center gap-x-2">
-            <span>CUPOM DE DESCONTO APLICADO — VÁLIDO ATÉ HOJE <CurrentDate /> 🔥</span>
-            <span className="hidden md:inline">|</span>
-            <div className="flex items-center gap-2">
-              <span>OFERTA ACABA EM</span>
-              <Countdown />
-            </div>
+      <header className="bg-accent text-accent-foreground text-center p-3 font-bold text-sm md:text-base animate-pulse">
+        <div className="container mx-auto flex flex-wrap items-center justify-center gap-x-2">
+          <span>CUPOM DE DESCONTO APLICADO — VÁLIDO ATÉ HOJE <CurrentDate /> 🔥</span>
+          <span className="hidden md:inline">|</span>
+          <div className="flex items-center gap-2">
+            <span>OFERTA ACABA EM</span>
+            <Countdown />
           </div>
-        </header>
+        </div>
+      </header>
 
-        <main>
-          <section className="relative">
-            <div className="container mx-auto px-4 py-16 md:py-24">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="block md:hidden mb-8 max-w-sm mx-auto">
-                  <Image
-                    src="https://i.postimg.cc/WzgYf675/Design-sem-nome-1.png"
-                    alt="Mulher sorrindo com artesanato de crochê"
-                    width={600}
-                    height={800}
-                    className="rounded-lg shadow-2xl object-cover w-full h-auto"
-                    data-ai-hint="woman smiling crochet"
-                    priority
-                  />
-                </div>
-                <div className="text-center md:text-left">
-                   <div className="inline-block bg-primary/10 p-2 rounded-lg mb-6">
-                      <BookOpen className="w-8 h-8 text-primary" />
-                   </div>
-                  <h1 className="text-4xl md:text-5xl font-headline font-black uppercase leading-tight mb-4 text-foreground">
-                    Transforme crochê em até <span className="text-primary">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
-                  </h1>
-                  <p className="text-lg text-muted-foreground mb-8">
-                    Receba uma coleção completa com as peças mais vendidas, explicadas em vídeo-aulas curtas e passo a passo, criadas para quem é totalmente iniciante.
-                  </p>
-                  <div className="flex justify-center md:justify-start">
-                    <Link href="#oferta">
-                      <Button
-                        size="lg"
-                        className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
-                      >
-                        QUERO RECEBER O CURSO
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-                <div className="hidden md:block">
-                  <Image
-                    src="https://i.postimg.cc/WzgYf675/Design-sem-nome-1.png"
-                    alt="Mulher sorrindo com artesanato de crochê"
-                    width={600}
-                    height={800}
-                    className="rounded-lg shadow-2xl object-cover w-full h-full"
-                    data-ai-hint="woman smiling crochet"
-                  />
-                </div>
+      <main>
+        <section className="relative">
+          <div className="container mx-auto px-4 py-16 md:py-24">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="block md:hidden mb-8 max-w-sm mx-auto">
+                <Image
+                  src="https://i.postimg.cc/WzgYf675/Design-sem-nome-1.png"
+                  alt="Mulher sorrindo com artesanato de crochê"
+                  width={600}
+                  height={800}
+                  className="rounded-lg shadow-2xl object-cover w-full h-auto"
+                  data-ai-hint="woman smiling crochet"
+                  priority
+                />
               </div>
-            </div>
-          </section>
-
-          <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai conquistar com a Coleção Lucre com Charme</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-                {[
-                  { emoji: '💰', text: 'Lucro de até R$3.000/mês com peças rápidas de crochê' },
-                  { emoji: '🏠', text: 'Prontas em menos de 1 hora, sem sair de casa ou pegar peso' },
-                  { emoji: '🛒', text: 'Materiais baratos e fáceis de encontrar' },
-                  { emoji: '👍', text: 'Receitas testadas por mais de 14 mil artesãs' },
-                  { emoji: '💬', text: 'Suporte exclusivo para tirar dúvidas' },
-                  { emoji: '🎁', text: 'Bônus: 10 ideias para embalar e vender mais' },
-                ].map((item, index) => (
-                  <div key={index} className="flex flex-col items-center gap-4">
-                    <span className="text-4xl">{item.emoji}</span>
-                    <p className="text-lg font-medium">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-12 flex justify-center">
-                 <Link href="#oferta">
+              <div className="text-center md:text-left">
+                 <div className="inline-block bg-primary/10 p-2 rounded-lg mb-6">
+                    <BookOpen className="w-8 h-8 text-primary" />
+                 </div>
+                <h1 className="text-4xl md:text-5xl font-headline font-black uppercase leading-tight mb-4 text-foreground">
+                  Transforme crochê em até <span className="text-primary">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
+                </h1>
+                <p className="text-lg text-muted-foreground mb-8">
+                  Receba uma coleção completa com as peças mais vendidas, explicadas em vídeo-aulas curtas e passo a passo, criadas para quem é totalmente iniciante.
+                </p>
+                <div className="flex justify-center md:justify-start">
+                  <Link href="#oferta">
                     <Button
                       size="lg"
                       className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
                     >
-                      QUERO TODO CONTEÚDO
+                      QUERO RECEBER O CURSO
                     </Button>
                   </Link>
+                </div>
+              </div>
+              <div className="hidden md:block">
+                <Image
+                  src="https://i.postimg.cc/WzgYf675/Design-sem-nome-1.png"
+                  alt="Mulher sorrindo com artesanato de crochê"
+                  width={600}
+                  height={800}
+                  className="rounded-lg shadow-2xl object-cover w-full h-full"
+                  data-ai-hint="woman smiling crochet"
+                />
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section className="py-16 md:py-24 container mx-auto px-4">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai conquistar com a Coleção Lucre com Charme</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+              {[
+                { emoji: '💰', text: 'Lucro de até R$3.000/mês com peças rápidas de crochê' },
+                { emoji: '🏠', text: 'Prontas em menos de 1 hora, sem sair de casa ou pegar peso' },
+                { emoji: '🛒', text: 'Materiais baratos e fáceis de encontrar' },
+                { emoji: '👍', text: 'Receitas testadas por mais de 14 mil artesãs' },
+                { emoji: '💬', text: 'Suporte exclusivo para tirar dúvidas' },
+                { emoji: '🎁', text: 'Bônus: 10 ideias para embalar e vender mais' },
+              ].map((item, index) => (
+                <div key={index} className="flex flex-col items-center gap-4">
+                  <span className="text-4xl">{item.emoji}</span>
+                  <p className="text-lg font-medium">{item.text}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-12 flex justify-center">
+               <Link href="#oferta">
+                  <Button
+                    size="lg"
+                    className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
+                  >
+                    QUERO TODO CONTEÚDO
+                  </Button>
+                </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">6 Motivos para Investir na Coleção Lucre com Charme</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -253,205 +253,205 @@ export default function CrochetLandingPage() {
                 </Button>
               </Link>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai aprender</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {[
-                  {
-                    title: '🧶 Tapetes, Sousplats, Flores e Itens de Decoração',
-                    image: 'https://i.postimg.cc/m2HkrcdB/1.png',
-                    'data-ai-hint': 'crochet decor',
-                  },
-                  {
-                    title: '👗 Roupas e Acessórios com Acabamento Profissional',
-                    image: 'https://i.postimg.cc/hGdhXX49/2.png',
-                    'data-ai-hint': 'crochet clothes',
-                  },
-                  {
-                    title: '⚡ Técnicas Rápidas de Produção e Fio Econômico',
-                    image: 'https://i.postimg.cc/YSYqpT8R/3.png',
-                    'data-ai-hint': 'crochet techniques',
-                  },
-                  {
-                    title: '🎁 Peças Temáticas para Natal, Dia das Mães e mais',
-                    image: 'https://i.postimg.cc/8CRN8MPn/4.png',
-                    'data-ai-hint': 'crochet gifts',
-                  },
-                ].map((item, index) => (
-                  <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-card">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      width={313}
-                      height={313}
-                      className="w-full h-48 object-cover"
-                      data-ai-hint={item['data-ai-hint']}
-                    />
-                    <CardContent className="p-4 pt-4">
-                      <p className="font-semibold text-lg">{item.title}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-
-                <Card className="md:col-span-2 lg:col-span-3 bg-primary text-primary-foreground p-8 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-6">
-                  <div className='flex-shrink-0'>
-                    <Image
-                      src="https://i.postimg.cc/tCctZJpK/minibundel3-compressed.webp"
-                      alt="Bônus Amigurumi"
-                      width={100}
-                      height={100}
-                      className="rounded-lg object-cover"
-                      data-ai-hint="amigurumi crochet"
-                    />
-                  </div>
-                  <div className='text-center md:text-left'>
-                    <h3 className="font-bold text-2xl mb-2">BÔNUS: Inicie no Amigurumi!</h3>
-                    <p>Aprenda a fazer bichinhos e bonequinhos de crochê — um sucesso de vendas como presente e decoração.</p>
-                  </div>
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai aprender</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: '🧶 Tapetes, Sousplats, Flores e Itens de Decoração',
+                  image: 'https://i.postimg.cc/m2HkrcdB/1.png',
+                  'data-ai-hint': 'crochet decor',
+                },
+                {
+                  title: '👗 Roupas e Acessórios com Acabamento Profissional',
+                  image: 'https://i.postimg.cc/hGdhXX49/2.png',
+                  'data-ai-hint': 'crochet clothes',
+                },
+                {
+                  title: '⚡ Técnicas Rápidas de Produção e Fio Econômico',
+                  image: 'https://i.postimg.cc/YSYqpT8R/3.png',
+                  'data-ai-hint': 'crochet techniques',
+                },
+                {
+                  title: '🎁 Peças Temáticas para Natal, Dia das Mães e mais',
+                  image: 'https://i.postimg.cc/8CRN8MPn/4.png',
+                  'data-ai-hint': 'crochet gifts',
+                },
+              ].map((item, index) => (
+                <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-card">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={313}
+                    height={313}
+                    className="w-full h-48 object-cover"
+                    data-ai-hint={item['data-ai-hint']}
+                  />
+                  <CardContent className="p-4 pt-4">
+                    <p className="font-semibold text-lg">{item.title}</p>
+                  </CardContent>
                 </Card>
+              ))}
 
-              </div>
-               <div className="mt-12 flex justify-center">
-                 <Link href="#oferta">
-                    <Button
-                      size="lg"
-                      className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
-                    >
-                      QUERO OS BÔNUS
-                    </Button>
-                  </Link>
-              </div>
-            </div>
-          </section>
-
-          <section className="py-16 md:py-24 bg-gradient-to-b from-orange-500 to-red-600 text-white">
-            <div className="container mx-auto px-4 text-center">
-              <div className="max-w-3xl mx-auto bg-white/10 border-2 border-dashed border-white/50 p-6 rounded-2xl relative">
-                <div className="absolute -top-3 -left-3 text-2xl animate-pulse">⚠️</div>
-                <div className="absolute -bottom-3 -left-3 text-2xl animate-pulse delay-500">⚠️</div>
-                <div className="absolute -top-3 -right-3 text-2xl animate-pulse delay-300">⚠️</div>
-                <div className="absolute -bottom-3 -right-3 text-2xl animate-pulse delay-700">⚠️</div>
-
-                <h2 className="text-3xl font-black flex items-center justify-center gap-2">
-                  <AlertTriangle className="w-8 h-8" />
-                  VAGAS LIMITADAS!
-                </h2>
-                <p className="text-lg font-semibold mt-4">
-                  Liberamos apenas 10 acessos promocionais por semana para garantir a qualidade no suporte.
-                </p>
-                <div className="mt-4 bg-white/20 py-2 px-4 rounded-md">
-                  <div className="w-full max-w-sm mx-auto">
-                      <p className="text-sm font-bold text-center mb-1">VAGAS PREENCHENDO</p>
-                      <Progress value={85} className="bg-white/30 h-3 [&>div]:bg-yellow-400"/>
-                  </div>
-                  <p className="font-bold mt-2">Após isso, o valor volta ao preço original.</p>
+              <Card className="md:col-span-2 lg:col-span-3 bg-primary text-primary-foreground p-8 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-6">
+                <div className='flex-shrink-0'>
+                  <Image
+                    src="https://i.postimg.cc/tCctZJpK/minibundel3-compressed.webp"
+                    alt="Bônus Amigurumi"
+                    width={100}
+                    height={100}
+                    className="rounded-lg object-cover"
+                    data-ai-hint="amigurumi crochet"
+                  />
                 </div>
-              </div>
-              <div className="mt-8">
-                <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
-                  SIM! QUERO A COLEÇÃO LUCRE COM CHARME
-                </CTAButton>
-              </div>
-              <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto text-white/80">
-                  <div className="flex flex-col items-center gap-2">
-                    <CheckCircle className="w-8 h-8 text-white"/>
-                    <span className="font-semibold">Garantia de 7 dias</span>
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
-                    <Lock className="w-8 h-8 text-white"/>
-                    <span className="font-semibold">Pagamento 100% seguro</span>
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
-                    <MessageCircle className="w-8 h-8 text-white"/>
-                    <span className="font-semibold">Suporte via WhatsApp</span>
-                  </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="py-16 md:py-24 bg-background">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Veja o que minhas alunas estão dizendo sobre:</h2>
-              <div className="max-w-2xl mx-auto">
-                <div className="overflow-hidden rounded-lg shadow-2xl">
-                  <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/y2m4gpjhpbgoi46fggvw2/Depoimentos-24-90-Feito-com-o-Clipchamp-3.mp4?rlkey=oipxlrt3lojq7ek7jyd04ew9j&st=x9ab4gpn&raw=1" />
+                <div className='text-center md:text-left'>
+                  <h3 className="font-bold text-2xl mb-2">BÔNUS: Inicie no Amigurumi!</h3>
+                  <p>Aprenda a fazer bichinhos e bonequinhos de crochê — um sucesso de vendas como presente e decoração.</p>
                 </div>
-              </div>
-              <div className="mt-12 flex justify-center">
-                 <Link href="#oferta">
-                    <Button
-                      size="lg"
-                      className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
-                    >
-                      QUERO SER A PRÓXIMA
-                    </Button>
-                  </Link>
-              </div>
-            </div>
-          </section>
+              </Card>
 
-          <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary overflow-hidden">
-            <div className="container mx-auto px-4">
-              <div className="relative flex overflow-x-hidden group">
-                <div className="flex animate-marquee group-hover:pause">
-                  {[...studentComments, ...studentComments].map((comment, index) => (
-                    <div key={index} className="flex-shrink-0 w-80 mx-4">
-                      <Card className="flex flex-col justify-between h-full shadow-md bg-background">
-                        <CardContent className="p-6">
-                          <p className="italic">"{comment.quote}"</p>
-                          <p className="font-bold mt-4">- {comment.name}</p>
-                          <Badge variant="secondary" className="mt-2 gap-1.5 pl-1.5">
-                            <Award className="w-3.5 h-3.5 text-primary" />
-                            Verificada
-                          </Badge>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
-          </section>
+             <div className="mt-12 flex justify-center">
+               <Link href="#oferta">
+                  <Button
+                    size="lg"
+                    className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
+                  >
+                    QUERO OS BÔNUS
+                  </Button>
+                </Link>
+            </div>
+          </div>
+        </section>
 
-          <section id="oferta" className="py-16 md:py-24 bg-primary text-primary-foreground">
-            <div className="container mx-auto px-4 text-center">
-               <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center justify-center gap-4">
-                <AnimatedGiftIcon />
-                <span>Oferta especial de hoje inclui um módulo extra de <strong>Amigurumi</strong>!</span>
+        <section className="py-16 md:py-24 bg-gradient-to-b from-orange-500 to-red-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-3xl mx-auto bg-white/10 border-2 border-dashed border-white/50 p-6 rounded-2xl relative">
+              <div className="absolute -top-3 -left-3 text-2xl animate-pulse">⚠️</div>
+              <div className="absolute -bottom-3 -left-3 text-2xl animate-pulse delay-500">⚠️</div>
+              <div className="absolute -top-3 -right-3 text-2xl animate-pulse delay-300">⚠️</div>
+              <div className="absolute -bottom-3 -right-3 text-2xl animate-pulse delay-700">⚠️</div>
+
+              <h2 className="text-3xl font-black flex items-center justify-center gap-2">
+                <AlertTriangle className="w-8 h-8" />
+                VAGAS LIMITADAS!
               </h2>
-              <div className="my-8">
-                <p className="text-2xl line-through opacity-70">De R$35</p>
-                <p className="text-6xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg text-glow-gold">R$24,90</p>
-                <p className="text-xl mt-2 font-semibold">Pagamento único, acesso vitalício</p>
+              <p className="text-lg font-semibold mt-4">
+                Liberamos apenas 10 acessos promocionais por semana para garantir a qualidade no suporte.
+              </p>
+              <div className="mt-4 bg-white/20 py-2 px-4 rounded-md">
+                <div className="w-full max-w-sm mx-auto">
+                    <p className="text-sm font-bold text-center mb-1">VAGAS PREENCHENDO</p>
+                    <Progress value={85} className="bg-white/30 h-3 [&>div]:bg-yellow-400"/>
+                </div>
+                <p className="font-bold mt-2">Após isso, o valor volta ao preço original.</p>
               </div>
+            </div>
+            <div className="mt-8">
               <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
-                QUERO COMEÇAR AGORA
+                SIM! QUERO A COLEÇÃO LUCRE COM CHARME
               </CTAButton>
             </div>
-          </section>
-
-          <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
-            <div className="container mx-auto px-4 max-w-3xl text-center">
-              <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-6">
-                  <BadgeCheck className="w-12 h-12 text-primary icon-metallic animate-shake" />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-headline font-black mb-4">Garantia de 7 dias ou seu dinheiro de volta</h2>
-              <p className="text-lg text-muted-foreground mb-6">Garanta sua coleção sem risco. Se não gostar, devolvemos seu dinheiro.</p>
-              <p className="text-muted-foreground">Você tem 7 dias para testar todas as receitas. Se não ficar satisfeita, basta enviar um e-mail e devolvemos 100% do seu investimento.</p>
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto text-white/80">
+                <div className="flex flex-col items-center gap-2">
+                  <CheckCircle className="w-8 h-8 text-white"/>
+                  <span className="font-semibold">Garantia de 7 dias</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <Lock className="w-8 h-8 text-white"/>
+                  <span className="font-semibold">Pagamento 100% seguro</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <MessageCircle className="w-8 h-8 text-white"/>
+                  <span className="font-semibold">Suporte via WhatsApp</span>
+                </div>
             </div>
-          </section>
-        </main>
-
-        <footer className="py-8 bg-secondary text-center">
-          <div className="container mx-auto px-4">
-            <p className="font-bold font-headline text-lg">Coleção Lucre com Charme – Transforme seu hobby em renda</p>
-            <p className="text-sm mt-2">&copy; 2025 Coleção Lucre com Charme. Todos os direitos reservados.</p>
           </div>
-        </footer>
-      </div>
+        </section>
+
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Veja o que minhas alunas estão dizendo sobre:</h2>
+            <div className="max-w-2xl mx-auto">
+              <div className="overflow-hidden rounded-lg shadow-2xl">
+                <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/y2m4gpjhpbgoi46fggvw2/Depoimentos-24-90-Feito-com-o-Clipchamp-3.mp4?rlkey=oipxlrt3lojq7ek7jyd04ew9j&st=x9ab4gpn&raw=1" />
+              </div>
+            </div>
+            <div className="mt-12 flex justify-center">
+               <Link href="#oferta">
+                  <Button
+                    size="lg"
+                    className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
+                  >
+                    QUERO SER A PRÓXIMA
+                  </Button>
+                </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary overflow-hidden">
+          <div className="container mx-auto px-4">
+            <div className="relative flex overflow-x-hidden group">
+              <div className="flex animate-marquee group-hover:pause">
+                {[...studentComments, ...studentComments].map((comment, index) => (
+                  <div key={index} className="flex-shrink-0 w-80 mx-4">
+                    <Card className="flex flex-col justify-between h-full shadow-md bg-background">
+                      <CardContent className="p-6">
+                        <p className="italic">"{comment.quote}"</p>
+                        <p className="font-bold mt-4">- {comment.name}</p>
+                        <Badge variant="secondary" className="mt-2 gap-1.5 pl-1.5">
+                          <Award className="w-3.5 h-3.5 text-primary" />
+                          Verificada
+                        </Badge>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="oferta" className="py-16 md:py-24 bg-primary text-primary-foreground">
+          <div className="container mx-auto px-4 text-center">
+             <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center justify-center gap-4">
+              <AnimatedGiftIcon />
+              <span>Oferta especial de hoje inclui um módulo extra de <strong>Amigurumi</strong>!</span>
+            </h2>
+            <div className="my-8">
+              <p className="text-2xl line-through opacity-70">De R$35</p>
+              <p className="text-6xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg text-glow-gold">R$24,90</p>
+              <p className="text-xl mt-2 font-semibold">Pagamento único, acesso vitalício</p>
+            </div>
+            <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
+              QUERO COMEÇAR AGORA
+            </CTAButton>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
+          <div className="container mx-auto px-4 max-w-3xl text-center">
+            <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-6">
+                <BadgeCheck className="w-12 h-12 text-primary icon-metallic animate-shake" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-headline font-black mb-4">Garantia de 7 dias ou seu dinheiro de volta</h2>
+            <p className="text-lg text-muted-foreground mb-6">Garanta sua coleção sem risco. Se não gostar, devolvemos seu dinheiro.</p>
+            <p className="text-muted-foreground">Você tem 7 dias para testar todas as receitas. Se não ficar satisfeita, basta enviar um e-mail e devolvemos 100% do seu investimento.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer className="py-8 bg-secondary text-center">
+        <div className="container mx-auto px-4">
+          <p className="font-bold font-headline text-lg">Coleção Lucre com Charme – Transforme seu hobby em renda</p>
+          <p className="text-sm mt-2">&copy; 2025 Coleção Lucre com Charme. Todos os direitos reservados.</p>
+        </div>
+      </footer>
     </div>
   );
 }
