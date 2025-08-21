@@ -127,7 +127,7 @@ export default function CrochetLandingPage() {
   return (
     <div className="bg-background text-foreground font-body">
       <header className="bg-accent text-accent-foreground text-center p-3 font-bold text-sm md:text-base animate-pulse">
-        <div className="container mx-auto flex flex-wrap items-center justify-center gap-x-2">
+        <div className="max-w-6xl mx-auto px-5 flex flex-wrap items-center justify-center gap-x-2">
           <span>CUPOM DE DESCONTO APLICADO — VÁLIDO ATÉ HOJE <CurrentDate /> 🔥</span>
           <span className="hidden md:inline">|</span>
           <div className="flex items-center gap-2">
@@ -139,7 +139,7 @@ export default function CrochetLandingPage() {
 
       <main>
         <section className="relative">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-5 py-16 md:py-24">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="block md:hidden mb-8 max-w-sm mx-auto">
                 <Image
@@ -188,7 +188,7 @@ export default function CrochetLandingPage() {
         </section>
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
-          <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto px-5">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai conquistar com a Coleção Lucre com Charme</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
               {[
@@ -219,7 +219,7 @@ export default function CrochetLandingPage() {
         </section>
 
         <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto px-5">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">6 Motivos para Investir na Coleção Lucre com Charme</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -257,7 +257,7 @@ export default function CrochetLandingPage() {
         </section>
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
-          <div className="container mx-auto px-4 text-center">
+          <div className="max-w-6xl mx-auto px-5 text-center">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai aprender</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -329,7 +329,7 @@ export default function CrochetLandingPage() {
         </section>
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-orange-500 to-red-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+          <div className="max-w-6xl mx-auto px-5 text-center">
             <div className="max-w-3xl mx-auto bg-white/10 border-2 border-dashed border-white/50 p-6 rounded-2xl relative">
               <div className="absolute -top-3 -left-3 text-2xl animate-pulse">⚠️</div>
               <div className="absolute -bottom-3 -left-3 text-2xl animate-pulse delay-500">⚠️</div>
@@ -374,7 +374,7 @@ export default function CrochetLandingPage() {
         </section>
 
         <section className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4 text-center">
+          <div className="max-w-6xl mx-auto px-5 text-center">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Veja o que minhas alunas estão dizendo sobre:</h2>
             <div className="max-w-2xl mx-auto">
               <div className="overflow-hidden rounded-lg shadow-2xl">
@@ -395,7 +395,7 @@ export default function CrochetLandingPage() {
         </section>
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary overflow-hidden">
-          <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto px-5">
             <div className="relative flex overflow-x-hidden group">
               <div className="flex animate-marquee group-hover:pause">
                 {[...studentComments, ...studentComments].map((comment, index) => (
@@ -418,7 +418,7 @@ export default function CrochetLandingPage() {
         </section>
 
         <section id="oferta" className="py-16 md:py-24 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
+          <div className="max-w-6xl mx-auto px-5 text-center">
              <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center justify-center gap-4">
               <AnimatedGiftIcon />
               <span>Oferta especial de hoje inclui um módulo extra de <strong>Amigurumi</strong>!</span>
@@ -435,7 +435,7 @@ export default function CrochetLandingPage() {
         </section>
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
-          <div className="container mx-auto px-4 max-w-3xl text-center">
+          <div className="max-w-3xl mx-auto px-5 text-center">
             <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-6">
                 <BadgeCheck className="w-12 h-12 text-primary icon-metallic animate-shake" />
             </div>
@@ -447,7 +447,7 @@ export default function CrochetLandingPage() {
       </main>
 
       <footer className="py-8 bg-secondary text-center">
-        <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-5">
           <p className="font-bold font-headline text-lg">Coleção Lucre com Charme – Transforme seu hobby em renda</p>
           <p className="text-sm mt-2">&copy; 2025 Coleção Lucre com Charme. Todos os direitos reservados.</p>
         </div>
