@@ -138,8 +138,8 @@ export default function CrochetLandingPage() {
       </header>
 
       <main>
-        <section className="relative">
-          <div className="max-w-6xl mx-auto px-5 py-16 md:py-24">
+        <section className="relative py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-5">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="block md:hidden mb-8 max-w-sm mx-auto">
                 <Image
@@ -424,8 +424,8 @@ export default function CrochetLandingPage() {
               <span>Oferta especial de hoje inclui um módulo extra de <strong>Amigurumi</strong>!</span>
             </h2>
             <div className="my-8">
-              <p className="text-2xl line-through opacity-70">De R$35</p>
-              <p className="text-6xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg text-glow-gold">R$24,90</p>
+              <p className="text-2xl line-through opacity-70">De R$20</p>
+              <p className="text-6xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg text-glow-gold">R$12,90</p>
               <p className="text-xl mt-2 font-semibold">Pagamento único, acesso vitalício</p>
             </div>
             <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
