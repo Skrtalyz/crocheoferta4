@@ -162,18 +162,17 @@ export default function CrochetLandingPage() {
       </header>
 
       <main>
-        <section className="bg-gray-900 text-white relative">
-          <div className="absolute inset-0 bg-black/60 z-10"></div>
-          <div className="container mx-auto px-4 py-16 md:py-24 relative z-20">
+        <section className="relative">
+          <div className="container mx-auto px-4 py-16 md:py-24">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="text-center md:text-left">
-                 <div className="inline-block bg-white/10 p-2 rounded-lg mb-6">
+                 <div className="inline-block bg-primary/10 p-2 rounded-lg mb-6">
                     <BookOpen className="w-8 h-8 text-primary" />
                  </div>
-                <h1 className="text-4xl md:text-5xl font-headline font-black uppercase leading-tight mb-4">
+                <h1 className="text-4xl md:text-5xl font-headline font-black uppercase leading-tight mb-4 text-foreground">
                   Transforme crochê em até <span className="text-primary">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
                 </h1>
-                <p className="text-lg text-gray-300 mb-8">
+                <p className="text-lg text-muted-foreground mb-8">
                   Receba uma coleção completa com as peças mais vendidas, explicadas em vídeo-aulas curtas e passo a passo, criadas para quem é totalmente iniciante.
                 </p>
                 <div className="my-8 bg-muted max-w-sm mx-auto md:mx-0 rounded-lg flex items-center justify-center overflow-hidden shadow-lg">
@@ -469,5 +468,3 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
-
-    
