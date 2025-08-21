@@ -67,30 +67,6 @@ const testimonials = [
   },
 ];
 
-const detailedTestimonials = [
-    {
-      name: 'Patrícia Silva',
-      role: 'artesã iniciante',
-      quote: 'Em uma semana fiz meu primeiro lucro com as peças da coleção. Hoje vendo direto no WhatsApp!',
-      avatar: 'https://i.postimg.cc/MTYh04Dj/thispersondoesnotexist.jpg',
-      "data-ai-hint": 'woman portrait'
-    },
-    {
-      name: 'Maria Santos',
-      role: 'dona de casa',
-      quote: 'Consegui uma renda extra de R$ 1.200 no primeiro mês! As receitas são muito fáceis de seguir.',
-      avatar: 'https://i.postimg.cc/hjKYGsB4/thispersondoesnotexist.jpg',
-      "data-ai-hint": 'woman portrait'
-    },
-    {
-      name: 'Ana Oliveira',
-      role: 'microempreendedora',
-      quote: 'Minha produção aumentou 300%! Agora tenho uma cartela de clientes fixos que sempre encomendam.',
-      avatar: 'https://i.postimg.cc/x84ptSbq/thispersondoesnotexist.jpg',
-      "data-ai-hint": 'woman portrait'
-    }
-];
-
 const studentComments = [
     { name: 'Carla M.', quote: 'Primeiro sousplat em 45min! Já vendi 3 por R$25 cada.' },
     { name: 'Fernanda C.', quote: '15 peças vendidas rapidinho no Instagram!' },
@@ -372,29 +348,6 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
-            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Veja o que quem comprou está dizendo</h2>
-            <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {detailedTestimonials.map((testimonial, index) => (
-                <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow bg-background">
-                    <CardContent className="p-6 text-center">
-                        <Image
-                            src={testimonial.avatar}
-                            alt={`Avatar de ${testimonial.name}`}
-                            width={100}
-                            height={100}
-                            className="rounded-full mb-4 mx-auto border-4 border-primary/20"
-                            data-ai-hint={testimonial['data-ai-hint']}
-                        />
-                        <p className="font-bold text-lg font-headline">{testimonial.name}</p>
-                        <p className="text-sm text-primary font-semibold mb-4">{testimonial.role}</p>
-                        <p className="italic">"{testimonial.quote}"</p>
-                    </CardContent>
-                </Card>
-                ))}
-            </div>
-        </section>
-        
         <section className="py-16 md:py-24 text-center container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Assista e descubra como é fácil começar</h2>
           <div className="my-8 bg-muted max-w-4xl mx-auto rounded-lg flex items-center justify-center overflow-hidden">
