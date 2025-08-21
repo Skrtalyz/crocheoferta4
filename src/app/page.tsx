@@ -216,11 +216,11 @@ export default function CrochetLandingPage() {
                 </div>
               ))}
             </div>
-            <div className="mt-12 text-center">
-               <Link href="#oferta" className="w-full max-w-sm mx-auto">
+            <div className="mt-12 flex justify-center">
+               <Link href="#oferta">
                   <Button
                     size="lg"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
+                    className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
                   >
                     QUERO TODO CONTEÚDO
                   </Button>
