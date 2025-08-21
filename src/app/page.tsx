@@ -361,7 +361,6 @@ export default function CrochetLandingPage() {
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary overflow-hidden">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que as nossas alunas estão falando sobre a coleção:</h2>
             <div className="relative flex overflow-x-hidden group">
               <div className="flex animate-marquee group-hover:pause">
                 {[...studentComments, ...studentComments].map((comment, index) => (
@@ -434,3 +433,5 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
+
+    
