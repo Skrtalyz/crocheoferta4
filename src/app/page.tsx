@@ -178,10 +178,9 @@ export default function CrochetLandingPage() {
                 <Link href="#oferta" className="w-full max-w-sm mx-auto md:mx-0">
                   <Button
                     size="lg"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
                   >
                     QUERO RECEBER O CURSO POR R$12,90
-                    <ArrowRight className="ml-2" />
                   </Button>
                 </Link>
               </div>
