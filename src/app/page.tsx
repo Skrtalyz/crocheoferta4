@@ -138,7 +138,7 @@ export default function CrochetLandingPage() {
       </header>
 
       <main>
-        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-primary">
           <div className="max-w-6xl mx-auto px-5">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="block md:hidden mb-8 max-w-sm mx-auto">
@@ -187,7 +187,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-primary to-background">
           <div className="max-w-6xl mx-auto px-5">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai conquistar com a Coleção Lucre com Charme</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
@@ -218,7 +218,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-primary">
           <div className="max-w-6xl mx-auto px-5">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">6 Motivos para Investir na Coleção Lucre com Charme</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -256,7 +256,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-primary to-background">
           <div className="max-w-6xl mx-auto px-5 text-center">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai aprender</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -434,7 +434,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-primary via-secondary to-background">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-primary to-background">
           <div className="max-w-3xl mx-auto px-5 text-center">
             <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-6">
                 <BadgeCheck className="w-12 h-12 text-primary icon-metallic animate-shake" />
