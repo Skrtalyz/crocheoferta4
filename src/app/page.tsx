@@ -125,7 +125,7 @@ export default function CrochetLandingPage() {
   const checkoutUrl = "https://www.ggcheckout.com/checkout/v2/vKlK889o7aTDZGgpBLOb";
 
   return (
-    <div className="bg-gradient-to-b from-background via-secondary to-background text-foreground font-body">
+    <div className="bg-gradient-to-b from-background via-secondary to-primary/30 text-foreground font-body">
       <header className="bg-accent text-accent-foreground text-center p-3 font-bold text-sm md:text-base animate-pulse sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-5 flex flex-wrap items-center justify-center gap-x-2">
           <span>CUPOM DE DESCONTO APLICADO — VÁLIDO ATÉ HOJE <CurrentDate /> 🔥</span>
