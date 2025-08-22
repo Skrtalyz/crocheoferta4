@@ -125,7 +125,7 @@ export default function CrochetLandingPage() {
   const checkoutUrl = "https://www.ggcheckout.com/checkout/v2/vKlK889o7aTDZGgpBLOb";
 
   return (
-    <div className="text-foreground font-body">
+    <div className="text-foreground font-body bg-background">
       <header className="bg-accent text-accent-foreground text-center p-3 font-bold text-sm md:text-base animate-pulse sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-5 flex flex-wrap items-center justify-center gap-x-2">
           <span>CUPOM DE DESCONTO APLICADO — VÁLIDO ATÉ HOJE <CurrentDate /> 🔥</span>
@@ -417,7 +417,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section id="oferta" className="py-16 md:py-24 bg-gradient-to-b from-secondary to-primary text-primary-foreground">
+        <section id="oferta" className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="max-w-6xl mx-auto px-5 text-center">
              <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center justify-center gap-4">
               <AnimatedGiftIcon />
@@ -437,7 +437,7 @@ export default function CrochetLandingPage() {
         <section className="py-16 md:py-24 bg-gradient-to-b from-primary to-background">
           <div className="max-w-3xl mx-auto px-5 text-center">
             <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-6">
-                <BadgeCheck className="w-12 h-12 text-secondary icon-metallic animate-shake" />
+                <BadgeCheck className="w-12 h-12 text-pink-300 icon-metallic animate-shake" />
             </div>
             <h2 className="text-3xl md:text-4xl font-headline font-black mb-4">Garantia de 7 dias ou seu dinheiro de volta</h2>
             <p className="text-lg text-muted-foreground mb-6">Garanta sua coleção sem risco. Se não gostar, devolvemos seu dinheiro.</p>
