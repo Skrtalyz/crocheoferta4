@@ -394,7 +394,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-background overflow-hidden">
+        <section className="py-16 md:py-24 bg-secondary overflow-hidden">
           <div className="max-w-full mx-auto">
             <div className="relative flex overflow-x-hidden group">
               <div className="flex animate-marquee group-hover:pause">
@@ -455,5 +455,3 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
-
-    
