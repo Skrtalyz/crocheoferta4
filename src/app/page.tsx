@@ -373,7 +373,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-red-600 to-background">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="max-w-6xl mx-auto px-5 text-center">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Veja o que minhas alunas estão dizendo sobre:</h2>
             <div className="max-w-2xl mx-auto">
