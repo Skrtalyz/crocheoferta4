@@ -98,7 +98,7 @@ const studentComments = [
 ];
 
 const CTAButton = ({ children, className, href }: { children: React.ReactNode, className?: string, href: string }) => (
-  <Link href={href} className="w-full max-w-md mx-auto block">
+  <a href={href} className="w-full max-w-md mx-auto block">
     <Button
       size="lg"
       className={cn(
@@ -108,7 +108,7 @@ const CTAButton = ({ children, className, href }: { children: React.ReactNode, c
     >
       {children}
     </Button>
-  </Link>
+  </a>
 );
 
 const AnimatedGiftIcon = () => (
@@ -125,7 +125,7 @@ export default function CrochetLandingPage() {
   const checkoutUrl = "https://www.ggcheckout.com/checkout/v2/vKlK889o7aTDZGgpBLOb";
 
   return (
-    <div className="text-foreground font-body bg-background">
+    <div className="text-foreground font-body">
       <header className="bg-accent text-accent-foreground text-center p-3 font-bold text-sm md:text-base animate-pulse sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-5 flex flex-wrap items-center justify-center gap-x-2">
           <span>CUPOM DE DESCONTO APLICADO — VÁLIDO ATÉ HOJE <CurrentDate /> 🔥</span>
@@ -163,14 +163,14 @@ export default function CrochetLandingPage() {
                   Receba uma coleção completa com as peças mais vendidas, explicadas em vídeo-aulas curtas e passo a passo, criadas para quem é totalmente iniciante.
                 </p>
                 <div className="flex justify-center md:justify-start">
-                  <Link href="#oferta">
+                  <a href={checkoutUrl}>
                     <Button
                       size="lg"
                       className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
                     >
                       QUERO RECEBER O CURSO
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </div>
               <div className="hidden md:block">
@@ -206,14 +206,14 @@ export default function CrochetLandingPage() {
               ))}
             </div>
             <div className="mt-12 flex justify-center">
-               <Link href="#oferta">
+               <a href={checkoutUrl}>
                   <Button
                     size="lg"
                     className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
                   >
                     QUERO TODO CONTEÚDO
                   </Button>
-                </Link>
+                </a>
             </div>
           </div>
         </section>
@@ -244,14 +244,14 @@ export default function CrochetLandingPage() {
               ))}
             </div>
             <div className="mt-12 flex justify-center">
-              <Link href="#oferta">
+              <a href={checkoutUrl}>
                 <Button
                   size="lg"
                   className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
                 >
                   QUERO APRENDER
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -316,14 +316,14 @@ export default function CrochetLandingPage() {
 
             </div>
              <div className="mt-12 flex justify-center">
-               <Link href="#oferta">
+               <a href={checkoutUrl}>
                   <Button
                     size="lg"
                     className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
                   >
                     QUERO OS BÔNUS
                   </Button>
-                </Link>
+                </a>
             </div>
           </div>
         </section>
@@ -382,14 +382,14 @@ export default function CrochetLandingPage() {
               </div>
             </div>
             <div className="mt-12 flex justify-center">
-               <Link href="#oferta">
+               <a href={checkoutUrl}>
                   <Button
                     size="lg"
                     className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
                   >
                     QUERO SER A PRÓXIMA
                   </Button>
-                </Link>
+                </a>
             </div>
           </div>
         </section>
@@ -434,7 +434,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-primary to-background">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="max-w-3xl mx-auto px-5 text-center">
             <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-6">
                 <BadgeCheck className="w-12 h-12 text-pink-300 icon-metallic animate-shake" />
