@@ -131,7 +131,7 @@ export default function CrochetLandingPage() {
           <span>CUPOM DE DESCONTO APLICADO — VÁLIDO ATÉ HOJE <CurrentDate /> 🔥</span>
           <span className="hidden md:inline">|</span>
           <div className="flex items-center gap-2">
-            <span>OFERTA ACABA EM</span>
+            <span>OFERTA ACABA NOS PRÓXIMOS</span>
             <Countdown />
           </div>
         </div>

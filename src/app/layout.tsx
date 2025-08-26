@@ -27,24 +27,25 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-      <Script id="utmify-pixel" strategy="afterInteractive">
-        {`
-          window.pixelId = "68ad0808acd512d1a30e695d";
-          var a = document.createElement("script");
-          a.setAttribute("async", "");
-          a.setAttribute("defer", "");
-          a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-          document.head.appendChild(a);
-        `}
-      </Script>
-      <Script
-        id="utmify-utms"
-        src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-        data-utmify-prevent-xcod-sck
-        data-utmify-prevent-subids
-        async
-        defer
-      ></Script>
+        
+      <script>
+  window.pixelId = "68ad0808acd512d1a30e695d";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
       </head>
       <body className={cn("font-body antialiased", inter.variable)}>
         {children}
