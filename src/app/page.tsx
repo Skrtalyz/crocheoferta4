@@ -378,9 +378,9 @@ export default function CrochetLandingPage() {
               {/* Plano Básico */}
               <Card className="flex flex-col border-2 border-border p-6 rounded-2xl shadow-lg">
                 <h3 className="text-2xl font-bold font-headline">Plano Básico</h3>
-                <p className="text-muted-foreground mb-4">O essencial para começar</p>
                 <p className="text-4xl font-black my-4">R$10<span className="text-lg font-medium">/pagamento único</span></p>
                 <ul className="space-y-3 text-left my-6 flex-grow">
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> 20 Aulas Passo a Passo</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Aulas de Peças Rápidas</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Receitas de Sousplats</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Receitas de Flores Decorativas</li>
@@ -397,9 +397,11 @@ export default function CrochetLandingPage() {
                 <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground font-bold px-4 py-1">ESCOLHA MAIS POPULAR</Badge>
                 <h3 className="text-2xl font-bold font-headline text-primary">Plano Completo</h3>
                 <p className="text-muted-foreground mb-4">Acesso total para lucrar de verdade</p>
-                <p className="text-4xl font-black my-4 text-yellow-500">R$27<span className="text-lg font-medium text-muted-foreground">/pagamento único</span></p>
+                <p className="text-4xl font-black my-4"><span className="text-yellow-500">R$27</span><span className="text-lg font-medium text-muted-foreground">/pagamento único</span></p>
                 <ul className="space-y-3 text-left my-6 flex-grow">
                   <li className="flex items-center gap-2 font-semibold"><Sparkles className="w-5 h-5 text-yellow-500" /> Tudo do Plano Básico +</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Mais de 40 aulas em vídeo</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Acesso Vitalício</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Todas as Receitas (Tapetes, Roupas, Bolsas...)</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Bônus: Módulo de Amigurumi</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Suporte Exclusivo para Dúvidas</li>
