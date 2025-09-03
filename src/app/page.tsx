@@ -381,6 +381,7 @@ export default function CrochetLandingPage() {
                 <p className="text-4xl font-black my-4">R$10<span className="text-lg font-medium">/pagamento único</span></p>
                 <ul className="space-y-3 text-left my-6 flex-grow">
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> 20 Aulas Passo a Passo</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Acesso por 6 meses</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Aulas de Peças Rápidas</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Receitas de Sousplats</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Receitas de Flores Decorativas</li>
