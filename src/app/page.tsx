@@ -383,7 +383,6 @@ export default function CrochetLandingPage() {
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> 20 Aulas Passo a Passo</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Acesso por 6 meses</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Aulas de Peças Rápidas</li>
-                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Receitas de Sousplats</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Receitas de Flores Decorativas</li>
                 </ul>
                 <a href={checkoutUrlBasico} className="w-full mt-auto">
@@ -403,7 +402,7 @@ export default function CrochetLandingPage() {
                   <li className="flex items-center gap-2 font-semibold"><Sparkles className="w-5 h-5 text-yellow-500" /> Tudo do Plano Básico +</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Mais de 40 aulas em vídeo</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Acesso Vitalício</li>
-                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Todas as Receitas (Tapetes, Roupas, Bolsas...)</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Todas as Receitas (Tapetes, Roupas, Bolsas, Sousplats...)</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Bônus: Módulo de Amigurumi</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Suporte Exclusivo para Dúvidas</li>
                   <li className="flex items-center gap-2 font-bold text-primary"><Sparkles className="w-5 h-5 text-primary" /> NOVO: Módulo de Precificação e Vendas</li>
