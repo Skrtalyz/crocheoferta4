@@ -3,44 +3,26 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import {
-  ArrowDown,
   BadgeCheck,
-  CheckCircle,
-  CreditCard,
-  DollarSign,
-  Gift,
+  BookOpen,
+  Check,
+  Sparkles,
   GraduationCap,
+  PiggyBank,
+  TrendingUp,
+  Percent,
   Heart,
-  Home,
+  AlertTriangle,
+  CheckCircle,
   Lock,
   MessageCircle,
-  Percent,
-  PiggyBank,
-  ShoppingCart,
-  Star,
-  TrendingUp,
-  Users,
-  AlertTriangle,
-  Award,
-  BookOpen,
-  ArrowRight,
-  Check,
-  Sparkles
+  Gift,
+  Award
 } from 'lucide-react';
-
-import Autoplay from 'embla-carousel-autoplay';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import Countdown from '@/components/countdown';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
@@ -79,19 +61,6 @@ const studentComments = [
     { name: 'Ivone P.', quote: 'R$3.200 em dezembro! Recorde!' },
 ];
 
-const CTAButton = ({ children, className, href }: { children: React.ReactNode, className?: string, href: string }) => (
-  <a href={href} className="w-full max-w-md mx-auto block">
-    <Button
-      size="lg"
-      className={cn(
-        "w-full h-auto py-4 px-6 text-lg md:text-xl font-bold bg-accent text-accent-foreground shadow-lg hover:bg-accent/90 transform hover:scale-105 transition-transform duration-300 whitespace-normal",
-        className
-      )}
-    >
-      {children}
-    </Button>
-  </a>
-);
 
 const AnimatedGiftIcon = () => (
   <div className="relative inline-block animate-gift-bounce">
@@ -447,7 +416,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
         
-        <section id="oferta" className="py-16 md:py-24 bg-primary text-primary-foreground">
+        <section id="oferta-final" className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="max-w-6xl mx-auto px-5 text-center">
              <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center justify-center gap-4">
               <AnimatedGiftIcon />
@@ -488,3 +457,5 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
+
+    
