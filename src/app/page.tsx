@@ -138,52 +138,7 @@ export default function CrochetLandingPage() {
             </div>
           </div>
         </section>
-
-        <section id="planos" className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
-          <div className="max-w-6xl mx-auto px-5 text-center">
-            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Escolha o plano ideal para você começar a lucrar</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
-              {/* Plano Básico */}
-              <Card className="flex flex-col border-2 border-border p-6 rounded-2xl shadow-lg">
-                <h3 className="text-2xl font-bold font-headline">Plano Básico</h3>
-                <p className="text-muted-foreground mb-4">O essencial para começar</p>
-                <p className="text-4xl font-black my-4">R$10<span className="text-lg font-medium">/pagamento único</span></p>
-                <ul className="space-y-3 text-left my-6 flex-grow">
-                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Aulas de Peças Rápidas</li>
-                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Receitas de Sousplats</li>
-                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Receitas de Flores Decorativas</li>
-                </ul>
-                <a href={checkoutUrlBasico} className="w-full mt-auto">
-                  <Button size="lg" variant="outline" className="w-full text-lg h-auto py-4">
-                    Começar com o Básico
-                  </Button>
-                </a>
-              </Card>
-
-              {/* Plano Completo */}
-              <Card className="relative flex flex-col border-4 border-primary p-6 rounded-2xl shadow-2xl bg-card">
-                <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground font-bold px-4 py-1">ESCOLHA MAIS POPULAR</Badge>
-                <h3 className="text-2xl font-bold font-headline text-primary">Plano Completo</h3>
-                <p className="text-muted-foreground mb-4">Acesso total para lucrar de verdade</p>
-                <p className="text-4xl font-black my-4">R$27<span className="text-lg font-medium">/pagamento único</span></p>
-                <ul className="space-y-3 text-left my-6 flex-grow">
-                  <li className="flex items-center gap-2 font-semibold"><Sparkles className="w-5 h-5 text-yellow-500" /> Tudo do Plano Básico +</li>
-                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Todas as Receitas (Tapetes, Roupas, Bolsas...)</li>
-                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Bônus: Módulo de Amigurumi</li>
-                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Suporte Exclusivo para Dúvidas</li>
-                  <li className="flex items-center gap-2 font-bold text-primary"><Sparkles className="w-5 h-5 text-primary" /> NOVO: Módulo de Precificação e Vendas</li>
-                  <li className="flex items-center gap-2 font-bold text-primary"><Sparkles className="w-5 h-5 text-primary" /> NOVO: Acesso à Comunidade VIP</li>
-                </ul>
-                <a href={checkoutUrlCompleto} className="w-full mt-auto">
-                  <Button size="lg" className="w-full text-lg h-auto py-4 bg-green-600 hover:bg-green-700 text-white animate-pulse">
-                    Quero o Acesso Completo!
-                  </Button>
-                </a>
-              </Card>
-            </div>
-          </div>
-        </section>
-
+        
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="max-w-6xl mx-auto px-5">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai conquistar com o <span className="text-primary">Plano Completo</span></h2>
@@ -416,6 +371,51 @@ export default function CrochetLandingPage() {
           </div>
         </section>
         
+        <section id="planos" className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
+          <div className="max-w-6xl mx-auto px-5 text-center">
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Escolha o plano ideal para você começar a lucrar</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+              {/* Plano Básico */}
+              <Card className="flex flex-col border-2 border-border p-6 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-bold font-headline">Plano Básico</h3>
+                <p className="text-muted-foreground mb-4">O essencial para começar</p>
+                <p className="text-4xl font-black my-4">R$10<span className="text-lg font-medium">/pagamento único</span></p>
+                <ul className="space-y-3 text-left my-6 flex-grow">
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Aulas de Peças Rápidas</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Receitas de Sousplats</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Receitas de Flores Decorativas</li>
+                </ul>
+                <a href={checkoutUrlBasico} className="w-full mt-auto">
+                  <Button size="lg" variant="outline" className="w-full text-lg h-auto py-4">
+                    Começar com o Básico
+                  </Button>
+                </a>
+              </Card>
+
+              {/* Plano Completo */}
+              <Card className="relative flex flex-col border-4 border-primary p-6 rounded-2xl shadow-2xl bg-card">
+                <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground font-bold px-4 py-1">ESCOLHA MAIS POPULAR</Badge>
+                <h3 className="text-2xl font-bold font-headline text-primary">Plano Completo</h3>
+                <p className="text-muted-foreground mb-4">Acesso total para lucrar de verdade</p>
+                <p className="text-4xl font-black my-4">R$27<span className="text-lg font-medium">/pagamento único</span></p>
+                <ul className="space-y-3 text-left my-6 flex-grow">
+                  <li className="flex items-center gap-2 font-semibold"><Sparkles className="w-5 h-5 text-yellow-500" /> Tudo do Plano Básico +</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Todas as Receitas (Tapetes, Roupas, Bolsas...)</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Bônus: Módulo de Amigurumi</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Suporte Exclusivo para Dúvidas</li>
+                  <li className="flex items-center gap-2 font-bold text-primary"><Sparkles className="w-5 h-5 text-primary" /> NOVO: Módulo de Precificação e Vendas</li>
+                  <li className="flex items-center gap-2 font-bold text-primary"><Sparkles className="w-5 h-5 text-primary" /> NOVO: Acesso à Comunidade VIP</li>
+                </ul>
+                <a href={checkoutUrlCompleto} className="w-full mt-auto">
+                  <Button size="lg" className="w-full text-lg h-auto py-4 bg-green-600 hover:bg-green-700 text-white animate-pulse">
+                    Quero o Acesso Completo!
+                  </Button>
+                </a>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         <section id="oferta-final" className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="max-w-6xl mx-auto px-5 text-center">
              <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center justify-center gap-4">
@@ -457,5 +457,3 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
-
-    
