@@ -25,7 +25,9 @@ import {
   AlertTriangle,
   Award,
   BookOpen,
-  ArrowRight
+  ArrowRight,
+  Check,
+  Sparkles
 } from 'lucide-react';
 
 import Autoplay from 'embla-carousel-autoplay';
@@ -46,26 +48,6 @@ import CustomVideoPlayer from '@/components/custom-video-player';
 import { cn } from '@/lib/utils';
 import CurrentDate from '@/components/current-date';
 
-const testimonials = [
-  {
-    name: 'Juliana S.',
-    quote: 'R$850 no primeiro mês! Técnicas incríveis.',
-    avatar: 'https://placehold.co/80x80.png',
-    "data-ai-hint": 'woman portrait'
-  },
-  {
-    name: 'Ivone P.',
-    quote: 'R$3.200 em dezembro! Recorde!',
-    avatar: 'https://placehold.co/80x80.png',
-    "data-ai-hint": 'woman portrait'
-  },
-  {
-    name: 'Maria Santos',
-    quote: 'Consegui R$1.200 no primeiro mês!',
-    avatar: 'https://placehold.co/80x80.png',
-    "data-ai-hint": 'woman portrait'
-  },
-];
 
 const studentComments = [
     { name: 'Carla M.', quote: 'Primeiro sousplat em 45min! Já vendi 3 por R$25 cada.' },
@@ -122,7 +104,8 @@ const AnimatedGiftIcon = () => (
 
 
 export default function CrochetLandingPage() {
-  const checkoutUrl = "https://www.ggcheckout.com/checkout/v2/vKlK889o7aTDZGgpBLOb";
+  const checkoutUrlCompleto = "https://www.ggcheckout.com/checkout/v2/vKlK889o7aTDZGgpBLOb?split=27";
+  const checkoutUrlBasico = "https://www.ggcheckout.com/checkout/v2/vKlK889o7aTDZGgpBLOb?split=10";
 
   return (
     <div className="text-foreground font-body">
@@ -163,12 +146,12 @@ export default function CrochetLandingPage() {
                   Receba uma coleção completa com as peças mais vendidas, explicadas em vídeo-aulas curtas e passo a passo, criadas para quem é totalmente iniciante.
                 </p>
                 <div className="flex justify-center md:justify-start">
-                  <a href={checkoutUrl}>
+                  <a href="#planos">
                     <Button
                       size="lg"
                       className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
                     >
-                      QUERO RECEBER O CURSO
+                      QUERO ESCOLHER MEU PLANO
                     </Button>
                   </a>
                 </div>
@@ -187,17 +170,62 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
+        <section id="planos" className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
+          <div className="max-w-6xl mx-auto px-5 text-center">
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Escolha o plano ideal para você começar a lucrar</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+              {/* Plano Básico */}
+              <Card className="flex flex-col border-2 border-border p-6 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-bold font-headline">Plano Básico</h3>
+                <p className="text-muted-foreground mb-4">O essencial para começar</p>
+                <p className="text-4xl font-black my-4">R$10<span className="text-lg font-medium">/pagamento único</span></p>
+                <ul className="space-y-3 text-left my-6 flex-grow">
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Aulas de Peças Rápidas</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Receitas de Sousplats</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Receitas de Flores Decorativas</li>
+                </ul>
+                <a href={checkoutUrlBasico} className="w-full mt-auto">
+                  <Button size="lg" variant="outline" className="w-full text-lg h-auto py-4">
+                    Começar com o Básico
+                  </Button>
+                </a>
+              </Card>
+
+              {/* Plano Completo */}
+              <Card className="relative flex flex-col border-4 border-primary p-6 rounded-2xl shadow-2xl bg-card">
+                <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground font-bold px-4 py-1">ESCOLHA MAIS POPULAR</Badge>
+                <h3 className="text-2xl font-bold font-headline text-primary">Plano Completo</h3>
+                <p className="text-muted-foreground mb-4">Acesso total para lucrar de verdade</p>
+                <p className="text-4xl font-black my-4">R$27<span className="text-lg font-medium">/pagamento único</span></p>
+                <ul className="space-y-3 text-left my-6 flex-grow">
+                  <li className="flex items-center gap-2 font-semibold"><Sparkles className="w-5 h-5 text-yellow-500" /> Tudo do Plano Básico +</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Todas as Receitas (Tapetes, Roupas, Bolsas...)</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Bônus: Módulo de Amigurumi</li>
+                  <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Suporte Exclusivo para Dúvidas</li>
+                  <li className="flex items-center gap-2 font-bold text-primary"><Sparkles className="w-5 h-5 text-primary" /> NOVO: Módulo de Precificação e Vendas</li>
+                  <li className="flex items-center gap-2 font-bold text-primary"><Sparkles className="w-5 h-5 text-primary" /> NOVO: Acesso à Comunidade VIP</li>
+                </ul>
+                <a href={checkoutUrlCompleto} className="w-full mt-auto">
+                  <Button size="lg" className="w-full text-lg h-auto py-4 bg-green-600 hover:bg-green-700 text-white animate-pulse">
+                    Quero o Acesso Completo!
+                  </Button>
+                </a>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="max-w-6xl mx-auto px-5">
-            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai conquistar com a Coleção Lucre com Charme</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai conquistar com o <span className="text-primary">Plano Completo</span></h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
               {[
-                { emoji: '💰', text: 'Lucro de até R$3.000/mês com peças rápidas de crochê' },
-                { emoji: '🏠', text: 'Prontas em menos de 1 hora, sem sair de casa ou pegar peso' },
-                { emoji: '🛒', text: 'Materiais baratos e fáceis de encontrar' },
+                { emoji: '💰', text: 'Potencial de Lucro de até R$3.000/mês' },
+                { emoji: '🏠', text: 'Trabalhe sem sair de casa ou pegar peso' },
+                { emoji: '🛒', text: 'Domine a arte de precificar e vender online' },
                 { emoji: '👍', text: 'Receitas testadas por mais de 14 mil artesãs' },
-                { emoji: '💬', text: 'Suporte exclusivo para tirar dúvidas' },
-                { emoji: '🎁', text: 'Bônus: 10 ideias para embalar e vender mais' },
+                { emoji: '💬', text: 'Suporte VIP para tirar dúvidas rapidamente' },
+                { emoji: '🎁', text: 'Bônus exclusivos que aceleram seus resultados' },
               ].map((item, index) => (
                 <div key={index} className="flex flex-col items-center gap-4">
                   <span className="text-4xl">{item.emoji}</span>
@@ -206,21 +234,21 @@ export default function CrochetLandingPage() {
               ))}
             </div>
             <div className="mt-12 flex justify-center">
-               <a href={checkoutUrl}>
+               <a href="#planos">
                   <Button
                     size="lg"
                     className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
                   >
-                    QUERO TODO CONTEÚDO
+                    QUERO O PLANO COMPLETO
                   </Button>
                 </a>
             </div>
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
           <div className="max-w-6xl mx-auto px-5">
-            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">6 Motivos para Investir na Coleção Lucre com Charme</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">6 Motivos para Investir no Plano Completo</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { icon: <GraduationCap />, title: 'Aprenda mesmo sendo iniciante', description: 'Aulas passo a passo, perfeitas para quem está começando do zero.' },
@@ -244,7 +272,7 @@ export default function CrochetLandingPage() {
               ))}
             </div>
             <div className="mt-12 flex justify-center">
-              <a href={checkoutUrl}>
+              <a href="#planos">
                 <Button
                   size="lg"
                   className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
@@ -256,9 +284,9 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="max-w-6xl mx-auto px-5 text-center">
-            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai aprender</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai aprender no Acesso Completo</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -316,7 +344,7 @@ export default function CrochetLandingPage() {
 
             </div>
              <div className="mt-12 flex justify-center">
-               <a href={checkoutUrl}>
+               <a href="#planos">
                   <Button
                     size="lg"
                     className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
@@ -327,8 +355,8 @@ export default function CrochetLandingPage() {
             </div>
           </div>
         </section>
-
-        <section className="py-16 md:py-24 bg-gradient-to-b from-orange-500 to-red-600 text-white">
+        
+        <section className="bg-orange-500 text-white py-16 md:py-24">
           <div className="max-w-6xl mx-auto px-5 text-center">
             <div className="max-w-3xl mx-auto bg-white/10 border-2 border-dashed border-white/50 p-6 rounded-2xl relative">
               <div className="absolute -top-3 -left-3 text-2xl animate-pulse">⚠️</div>
@@ -352,9 +380,11 @@ export default function CrochetLandingPage() {
               </div>
             </div>
             <div className="mt-8">
-              <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
-                SIM! QUERO A COLEÇÃO LUCRE COM CHARME
-              </CTAButton>
+              <a href="#planos" className="w-full max-w-md mx-auto block">
+                <Button size="lg" className="w-full h-auto py-4 px-6 text-lg md:text-xl font-bold bg-green-600 hover:bg-green-700 text-white shadow-lg hover:bg-accent/90 transform hover:scale-105 transition-transform duration-300 whitespace-normal">
+                  SIM! QUERO GARANTIR MINHA VAGA
+                </Button>
+              </a>
             </div>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto text-white/80">
                 <div className="flex flex-col items-center gap-2">
@@ -373,7 +403,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
           <div className="max-w-6xl mx-auto px-5 text-center">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Veja o que minhas alunas estão dizendo sobre:</h2>
             <div className="max-w-2xl mx-auto">
@@ -382,7 +412,7 @@ export default function CrochetLandingPage() {
               </div>
             </div>
             <div className="mt-12 flex justify-center">
-               <a href={checkoutUrl}>
+               <a href="#planos">
                   <Button
                     size="lg"
                     className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
@@ -406,7 +436,7 @@ export default function CrochetLandingPage() {
                         <p className="font-bold mt-4">- {comment.name}</p>
                         <Badge variant="secondary" className="mt-2 gap-1.5 pl-1.5">
                           <Award className="w-3.5 h-3.5 text-primary" />
-                          Verificada
+                          Aluna Verificada
                         </Badge>
                       </CardContent>
                     </Card>
@@ -416,21 +446,24 @@ export default function CrochetLandingPage() {
             </div>
           </div>
         </section>
-
+        
         <section id="oferta" className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="max-w-6xl mx-auto px-5 text-center">
              <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center justify-center gap-4">
               <AnimatedGiftIcon />
-              <span>Oferta especial de hoje inclui um módulo extra de <strong>Amigurumi</strong>!</span>
+              <span>Ainda em dúvida? Escolha seu plano e comece hoje!</span>
             </h2>
-            <div className="my-8">
-              <p className="text-2xl line-through opacity-70">De R$20</p>
-              <p className="text-6xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg">R$12,90</p>
-              <p className="text-xl mt-2 font-semibold">Pagamento único, acesso vitalício</p>
+            <p className="text-xl mt-2 mb-8 font-semibold">Pagamento único, acesso vitalício e resultados rápidos.</p>
+            <div className="flex justify-center">
+               <a href="#planos">
+                  <Button
+                    size="lg"
+                    className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
+                  >
+                    ESCOLHER MEU PLANO AGORA
+                  </Button>
+                </a>
             </div>
-            <CTAButton href={checkoutUrl} className="bg-green-600 hover:bg-green-700 text-white font-bold">
-              QUERO COMEÇAR AGORA
-            </CTAButton>
           </div>
         </section>
 
@@ -440,8 +473,8 @@ export default function CrochetLandingPage() {
                 <BadgeCheck className="w-12 h-12 text-pink-300 icon-metallic animate-shake" />
             </div>
             <h2 className="text-3xl md:text-4xl font-headline font-black mb-4">Garantia de 7 dias ou seu dinheiro de volta</h2>
-            <p className="text-lg text-muted-foreground mb-6">Garanta sua coleção sem risco. Se não gostar, devolvemos seu dinheiro.</p>
-            <p className="text-muted-foreground">Você tem 7 dias para testar todas as receitas. Se não ficar satisfeita, basta enviar um e-mail e devolvemos 100% do seu investimento.</p>
+            <p className="text-lg text-muted-foreground mb-6">Garanta seu acesso sem risco. Se não gostar, devolvemos seu dinheiro.</p>
+            <p className="text-muted-foreground">Você tem 7 dias para testar todo o material. Se não ficar satisfeita, basta enviar um e-mail e devolvemos 100% do seu investimento, sem perguntas.</p>
           </div>
         </section>
       </main>
