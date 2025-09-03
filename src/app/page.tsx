@@ -394,7 +394,7 @@ export default function CrochetLandingPage() {
 
               {/* Plano Completo */}
               <Card className="relative flex flex-col border-4 border-primary p-6 rounded-2xl shadow-2xl bg-card">
-                <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground font-bold px-4 py-1">ESCOLHA MAIS POPULAR</Badge>
+                <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground font-bold px-4 py-1">ESCOLHA DE QUEM VENDE MAIS</Badge>
                 <h3 className="text-2xl font-bold font-headline text-primary">Plano Completo</h3>
                 <p className="text-muted-foreground mb-4">Acesso total para lucrar de verdade</p>
                 <p className="text-4xl font-black my-4"><span className="text-yellow-500">R$27</span><span className="text-lg font-medium text-muted-foreground">/pagamento único</span></p>
