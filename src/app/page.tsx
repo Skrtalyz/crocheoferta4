@@ -73,7 +73,7 @@ const AnimatedGiftIcon = () => (
 
 
 export default function CrochetLandingPage() {
-  const checkoutUrlCompleto = "https://www.ggcheckout.com/checkout/v2/vKlK889o7aTDZGgpBLOb?split=27";
+  const checkoutUrlCompleto = "https://www.ggcheckout.com/checkout/v2/jRiQJtpwd5vgbl9aqA9m";
   const checkoutUrlBasico = "https://www.ggcheckout.com/checkout/v2/vKlK889o7aTDZGgpBLOb?split=10";
 
   return (
