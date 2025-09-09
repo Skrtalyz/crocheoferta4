@@ -78,12 +78,6 @@ export default function CrochetLandingPage() {
 
   return (
     <div className="text-foreground font-body">
-      <header className="bg-accent text-accent-foreground text-center p-3 font-bold text-sm md:text-base animate-pulse sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-5 flex flex-wrap items-center justify-center gap-x-2">
-          <span>CUPOM DE DESCONTO APLICADO — VÁLIDO ATÉ HOJE <CurrentDate /> 🔥</span>
-        </div>
-      </header>
-
       <main>
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="max-w-6xl mx-auto px-5">
