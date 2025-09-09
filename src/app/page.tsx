@@ -83,9 +83,6 @@ export default function CrochetLandingPage() {
           <div className="max-w-6xl mx-auto px-5">
             <div className="grid md:grid-cols-1 gap-12 items-center">
               <div className="text-center md:text-left">
-                 <div className="inline-block bg-primary/10 p-2 rounded-lg mb-6">
-                    <BookOpen className="w-8 h-8 text-primary" />
-                 </div>
                 <h1 className="text-4xl md:text-5xl font-headline font-black uppercase leading-tight mb-4 text-foreground">
                   Transforme crochê em até <span className="text-primary">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
                 </h1>
@@ -427,3 +424,5 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
+
+    
