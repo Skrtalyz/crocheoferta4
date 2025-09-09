@@ -172,7 +172,7 @@ export default function CrochetLandingPage() {
         <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
           <div className="max-w-6xl mx-auto px-5 text-center">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">Veja o que minhas alunas estão dizendo sobre:</h2>
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-sm mx-auto">
               <div className="overflow-hidden rounded-lg shadow-2xl">
                 <CustomVideoPlayer src="https://www.dropbox.com/scl/fi/ocym0rgadl8tnsopaupxh/video-novo-do-depoimento-do-site-Feito-com-o-Clipchamp-1.mp4?rlkey=g03vp1rf9irmcf8t5wrco2lrr&st=tpsxrs7v&raw=1" />
               </div>
@@ -281,20 +281,5 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
-
-    
-
-    
-
-
-
-
-    
-
-
-
-
-
-    
 
     
