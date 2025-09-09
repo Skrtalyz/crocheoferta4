@@ -93,7 +93,7 @@ export default function CrochetLandingPage() {
                     size="lg"
                     className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
                   >
-                    QUERO ESCOLHER MEU PLANO
+                    QUERO COMEÇAR A LUCRAR AGORA
                   </Button>
                 </a>
               </div>
@@ -287,3 +287,6 @@ export default function CrochetLandingPage() {
     
 
 
+
+
+    
