@@ -239,7 +239,7 @@ export default function CrochetLandingPage() {
                 <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground font-bold px-4 py-1">ESCOLHA DE QUEM VENDE MAIS</Badge>
                 <h3 className="text-2xl font-bold font-headline text-primary">Plano Completo</h3>
                 <p className="text-muted-foreground mb-4">Acesso total para lucrar de verdade</p>
-                <p className="text-4xl font-black my-4"><span className="text-green-600">R$27</span><span className="text-lg font-medium text-muted-foreground">/pagamento único</span></p>
+                <p className="text-4xl font-black my-4"><span className="text-green-500">R$27</span><span className="text-lg font-medium text-muted-foreground">/pagamento único</span></p>
                 <ul className="space-y-3 text-left my-6 flex-grow">
                   <li className="flex items-center gap-2 font-semibold"><Sparkles className="w-5 h-5 text-yellow-500" /> Tudo do Plano Básico +</li>
                   <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> Mais de 40 aulas em vídeo</li>
@@ -290,5 +290,6 @@ export default function CrochetLandingPage() {
 
 
     
+
 
 
