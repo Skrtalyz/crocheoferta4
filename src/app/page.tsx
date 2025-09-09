@@ -260,26 +260,6 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section id="oferta-final" className="py-16 md:py-24 bg-primary text-primary-foreground">
-          <div className="max-w-6xl mx-auto px-5 text-center">
-             <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center justify-center gap-4">
-              <AnimatedGiftIcon />
-              <span>Ainda em dúvida? Escolha seu plano e comece hoje!</span>
-            </h2>
-            <p className="text-xl mt-2 mb-8 font-semibold">Pagamento único, acesso vitalício e resultados rápidos.</p>
-            <div className="flex justify-center">
-               <a href="#planos">
-                  <Button
-                    size="lg"
-                    className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
-                  >
-                    ESCOLHER MEU PLANO AGORA
-                  </Button>
-                </a>
-            </div>
-          </div>
-        </section>
-
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="max-w-3xl mx-auto px-5 text-center">
             <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-6">
@@ -305,3 +285,4 @@ export default function CrochetLandingPage() {
     
 
     
+
