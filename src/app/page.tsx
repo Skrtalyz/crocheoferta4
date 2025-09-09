@@ -101,20 +101,22 @@ export default function CrochetLandingPage() {
         <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
           <div className="max-w-4xl mx-auto px-5">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-10">O que você vai RECEBER:</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                "Mais de 40 aulas em vídeo com receitas passo a passo das peças que mais vendem.",
-                "Acesso Vitalício para ver e rever as aulas quando e quantas vezes quiser.",
-                "Todos os módulos: Aprenda a fazer tapetes, sousplats, roupas, bolsas e itens de decoração.",
-                "Bônus Exclusivo: O módulo completo de Amigurumi, para você criar e vender os bichinhos de crochê que são febre no mercado.",
-                "Suporte VIP: Tire todas as suas dúvidas rapidamente para não travar suas criações.",
-                "NOVO Módulo de Vendas: Aprenda a precificar e a vender seu trabalho com segurança e alta lucratividade.",
-                "Acesso à Comunidade VIP: Faça parte de um grupo exclusivo de artesãs para trocar experiências e se inspirar.",
+                { emoji: '🎥', text: 'Mais de 40 aulas em vídeo com receitas passo a passo das peças que mais vendem.' },
+                { emoji: '♾️', text: 'Acesso Vitalício para ver e rever as aulas quando e quantas vezes quiser.' },
+                { emoji: '📚', text: 'Todos os módulos: Aprenda a fazer tapetes, sousplats, roupas, bolsas e itens de decoração.' },
+                { emoji: '🎁', text: 'Bônus Exclusivo: O módulo completo de Amigurumi, para você criar e vender os bichinhos de crochê que são febre no mercado.' },
+                { emoji: '💬', text: 'Suporte VIP: Tire todas as suas dúvidas rapidamente para não travar suas criações.' },
+                { emoji: '💰', text: 'NOVO Módulo de Vendas: Aprenda a precificar e a vender seu trabalho com segurança e alta lucratividade.' },
+                { emoji: '👩‍👩‍👧‍👧', text: 'Acesso à Comunidade VIP: Faça parte de um grupo exclusivo de artesãs para trocar experiências e se inspirar.' },
               ].map((item, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
-                  <p className="text-base md:text-lg">{item}</p>
-                </div>
+                <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow bg-card">
+                  <CardContent className="p-6 flex items-start gap-4">
+                    <span className="text-3xl mt-1">{item.emoji}</span>
+                    <p className="text-base md:text-lg">{item.text}</p>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
@@ -440,3 +442,5 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
+
+    
