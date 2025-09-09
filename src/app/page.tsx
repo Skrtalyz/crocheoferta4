@@ -81,18 +81,7 @@ export default function CrochetLandingPage() {
       <main>
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="max-w-6xl mx-auto px-5">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="md:hidden mb-8 max-w-sm mx-auto">
-                <Image
-                  src="https://i.postimg.cc/WzgYf675/Design-sem-nome-1.png"
-                  alt="Mulher sorrindo com artesanato de crochê"
-                  width={600}
-                  height={800}
-                  className="rounded-lg shadow-2xl object-cover w-full h-auto"
-                  data-ai-hint="woman smiling crochet"
-                  priority
-                />
-              </div>
+            <div className="grid md:grid-cols-1 gap-12 items-center">
               <div className="text-center md:text-left">
                  <div className="inline-block bg-primary/10 p-2 rounded-lg mb-6">
                     <BookOpen className="w-8 h-8 text-primary" />
@@ -113,16 +102,6 @@ export default function CrochetLandingPage() {
                     </Button>
                   </a>
                 </div>
-              </div>
-              <div className="hidden md:block">
-                <Image
-                  src="https://i.postimg.cc/WzgYf675/Design-sem-nome-1.png"
-                  alt="Mulher sorrindo com artesanato de crochê"
-                  width={600}
-                  height={800}
-                  className="rounded-lg shadow-2xl object-cover w-full h-full"
-                  data-ai-hint="woman smiling crochet"
-                />
               </div>
             </div>
           </div>
