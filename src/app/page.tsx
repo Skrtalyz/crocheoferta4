@@ -82,10 +82,10 @@ export default function CrochetLandingPage() {
           <div className="max-w-6xl mx-auto px-5">
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-headline font-black uppercase leading-tight mb-4 text-foreground">
-                Transforme crochê em até <span className="text-primary">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
+                Transforme sua paixão em lucro! Aprenda a fazer e vender as peças de crochê mais lucrativas do mercado e fature até <span className="text-primary">R$3.000 por mês</span>.
               </h1>
               <p className="text-lg text-muted-foreground mb-8">
-                Receba uma coleção completa com as peças mais vendidas, explicadas em vídeo-aulas curtas e passo a passo, criadas para quem é totalmente iniciante.
+                Receba uma coleção completa, com aulas simples e passo a passo, criadas para guiar até mesmo quem nunca pegou em uma agulha.
               </p>
               <div className="flex justify-center">
                 <a href="#planos">
@@ -285,4 +285,5 @@ export default function CrochetLandingPage() {
     
 
     
+
 
