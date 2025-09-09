@@ -12,7 +12,7 @@ body {
 
 @layer base {
   :root {
-    --background: 322 67% 90%;
+    --background: 322 67% 97%;
     --foreground: 322 25% 25%;
     --card: 322 67% 96%;
     --card-foreground: 322 25% 25%;
@@ -20,7 +20,7 @@ body {
     --popover-foreground: 322 25% 25%;
     --primary: 322 75% 43%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 322 75% 85%;
+    --secondary: 322 75% 92%;
     --secondary-foreground: 322 75% 25%;
     --muted: 322 67% 88%;
     --muted-foreground: 322 25% 45%;
