@@ -100,10 +100,7 @@ export default function CrochetLandingPage() {
 
         <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
           <div className="max-w-4xl mx-auto px-5">
-            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-4">O que você vai RECEBER:</h2>
-            <p className="text-lg text-muted-foreground text-center mb-10">
-              Ao garantir seu acesso, você vai receber tudo que precisa para transformar sua paixão em um negócio lucrativo. Dentro da área de alunas, você encontrará:
-            </p>
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-10">O que você vai RECEBER:</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
               {[
                 "Mais de 40 aulas em vídeo com receitas passo a passo das peças que mais vendem.",
