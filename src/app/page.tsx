@@ -5,7 +5,6 @@ import React from 'react';
 import Image from 'next/image';
 import {
   BadgeCheck,
-  BookOpen,
   Check,
   Sparkles,
   GraduationCap,
@@ -23,12 +22,9 @@ import {
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Countdown from '@/components/countdown';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import CustomVideoPlayer from '@/components/custom-video-player';
-import { cn } from '@/lib/utils';
-import CurrentDate from '@/components/current-date';
 
 
 const studentComments = [
@@ -82,14 +78,14 @@ export default function CrochetLandingPage() {
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="max-w-6xl mx-auto px-5">
             <div className="grid md:grid-cols-1 gap-12 items-center">
-              <div className="text-center md:text-left">
+              <div className="text-center">
                 <h1 className="text-4xl md:text-5xl font-headline font-black uppercase leading-tight mb-4 text-foreground">
                   Transforme crochê em até <span className="text-primary">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
                   Receba uma coleção completa com as peças mais vendidas, explicadas em vídeo-aulas curtas e passo a passo, criadas para quem é totalmente iniciante.
                 </p>
-                <div className="flex justify-center md:justify-start">
+                <div className="flex justify-center">
                   <a href="#planos">
                     <Button
                       size="lg"
@@ -424,5 +420,3 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
-
-    
