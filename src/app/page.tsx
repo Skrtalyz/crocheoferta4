@@ -114,7 +114,7 @@ export default function CrochetLandingPage() {
                 { emoji: '💰', text: 'NOVO Módulo de Vendas: Aprenda a precificar e a vender seu trabalho com segurança e alta lucratividade.' },
                 { emoji: '👩‍👩‍👧‍👧', text: 'Acesso à Comunidade VIP: Faça parte de um grupo exclusivo de artesãs para trocar experiências e se inspirar.' },
               ].map((item, index) => (
-                <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow bg-card">
+                <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-br from-card via-muted to-card">
                   <CardContent className="p-6 flex items-start gap-4">
                     <span className="text-3xl mt-1">{item.emoji}</span>
                     <p className="text-base md:text-lg">{item.text}</p>
@@ -129,7 +129,7 @@ export default function CrochetLandingPage() {
           <div className="max-w-4xl mx-auto px-5">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-10">BÔNUS EXCLUSIVOS:</h2>
             <div className="space-y-6">
-                <Card className="shadow-lg hover:shadow-xl transition-shadow bg-card">
+                <Card className="shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-br from-card via-muted to-card">
                     <CardContent className="p-6 flex items-start gap-4">
                         <Gift className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
                         <div>
@@ -138,7 +138,7 @@ export default function CrochetLandingPage() {
                         </div>
                     </CardContent>
                 </Card>
-                <Card className="shadow-lg hover:shadow-xl transition-shadow bg-card">
+                <Card className="shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-br from-card via-muted to-card">
                     <CardContent className="p-6 flex items-start gap-4">
                         <Store className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
                         <div>
@@ -147,7 +147,7 @@ export default function CrochetLandingPage() {
                         </div>
                     </CardContent>
                 </Card>
-                <Card className="shadow-lg hover:shadow-xl transition-shadow bg-card">
+                <Card className="shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-br from-card via-muted to-card">
                     <CardContent className="p-6 flex items-start gap-4">
                         <MessageCircle className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
                         <div>
@@ -156,7 +156,7 @@ export default function CrochetLandingPage() {
                         </div>
                     </CardContent>
                 </Card>
-                <Card className="shadow-lg hover:shadow-xl transition-shadow bg-card">
+                <Card className="shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-br from-card via-muted to-card">
                     <CardContent className="p-6 flex items-start gap-4">
                         <Users className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
                         <div>
@@ -290,3 +290,4 @@ export default function CrochetLandingPage() {
 
 
     
+
