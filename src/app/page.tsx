@@ -77,25 +77,48 @@ export default function CrochetLandingPage() {
       <main>
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="max-w-6xl mx-auto px-5">
-            <div className="grid md:grid-cols-1 gap-12 items-center">
-              <div className="text-center">
-                <h1 className="text-4xl md:text-5xl font-headline font-black uppercase leading-tight mb-4 text-foreground">
-                  Transforme crochê em até <span className="text-primary">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
-                </h1>
-                <p className="text-lg text-muted-foreground mb-8">
-                  Receba uma coleção completa com as peças mais vendidas, explicadas em vídeo-aulas curtas e passo a passo, criadas para quem é totalmente iniciante.
-                </p>
-                <div className="flex justify-center">
-                  <a href="#planos">
-                    <Button
-                      size="lg"
-                      className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
-                    >
-                      QUERO ESCOLHER MEU PLANO
-                    </Button>
-                  </a>
-                </div>
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-headline font-black uppercase leading-tight mb-4 text-foreground">
+                Transforme crochê em até <span className="text-primary">R$3.000 por mês</span> com peças charmosas e rápidas de fazer!
+              </h1>
+              <p className="text-lg text-muted-foreground mb-8">
+                Receba uma coleção completa com as peças mais vendidas, explicadas em vídeo-aulas curtas e passo a passo, criadas para quem é totalmente iniciante.
+              </p>
+              <div className="flex justify-center">
+                <a href="#planos">
+                  <Button
+                    size="lg"
+                    className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-auto py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-normal"
+                  >
+                    QUERO ESCOLHER MEU PLANO
+                  </Button>
+                </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
+          <div className="max-w-4xl mx-auto px-5">
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-4">O que você vai RECEBER:</h2>
+            <p className="text-lg text-muted-foreground text-center mb-10">
+              Ao garantir seu acesso, você vai receber tudo que precisa para transformar sua paixão em um negócio lucrativo. Dentro da área de alunas, você encontrará:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+              {[
+                "Mais de 40 aulas em vídeo com receitas passo a passo das peças que mais vendem.",
+                "Acesso Vitalício para ver e rever as aulas quando e quantas vezes quiser.",
+                "Todos os módulos: Aprenda a fazer tapetes, sousplats, roupas, bolsas e itens de decoração.",
+                "Bônus Exclusivo: O módulo completo de Amigurumi, para você criar e vender os bichinhos de crochê que são febre no mercado.",
+                "Suporte VIP: Tire todas as suas dúvidas rapidamente para não travar suas criações.",
+                "NOVO Módulo de Vendas: Aprenda a precificar e a vender seu trabalho com segurança e alta lucratividade.",
+                "Acesso à Comunidade VIP: Faça parte de um grupo exclusivo de artesãs para trocar experiências e se inspirar.",
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                  <p className="text-base md:text-lg">{item}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
