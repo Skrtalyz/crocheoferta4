@@ -17,7 +17,10 @@ import {
   Lock,
   MessageCircle,
   Gift,
-  Award
+  Award,
+  BookHeart,
+  Store,
+  Users
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -123,6 +126,50 @@ export default function CrochetLandingPage() {
         </section>
         
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
+          <div className="max-w-4xl mx-auto px-5">
+            <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-10">BÔNUS EXCLUSIVOS:</h2>
+            <div className="space-y-6">
+                <Card className="shadow-lg hover:shadow-xl transition-shadow bg-card">
+                    <CardContent className="p-6 flex items-start gap-4">
+                        <Gift className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                            <h3 className="font-bold text-lg">Módulo de Amigurumi</h3>
+                            <p className="text-base md:text-lg text-muted-foreground">Aprenda a fazer bichinhos e bonequinhos de crochê que são um sucesso de vendas como presente e decoração.</p>
+                        </div>
+                    </CardContent>
+                </Card>
+                <Card className="shadow-lg hover:shadow-xl transition-shadow bg-card">
+                    <CardContent className="p-6 flex items-start gap-4">
+                        <Store className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                            <h3 className="font-bold text-lg">Módulo NOVO de Precificação e Vendas</h3>
+                            <p className="text-base md:text-lg text-muted-foreground">O segredo para você saber exatamente quanto cobrar por cada peça e vender com segurança e alta margem de lucro.</p>
+                        </div>
+                    </CardContent>
+                </Card>
+                <Card className="shadow-lg hover:shadow-xl transition-shadow bg-card">
+                    <CardContent className="p-6 flex items-start gap-4">
+                        <MessageCircle className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                            <h3 className="font-bold text-lg">Suporte VIP para Dúvidas</h3>
+                            <p className="text-base md:text-lg text-muted-foreground">Conte com o nosso suporte exclusivo para tirar todas as suas dúvidas rapidamente e continuar avançando sem travar.</p>
+                        </div>
+                    </CardContent>
+                </Card>
+                <Card className="shadow-lg hover:shadow-xl transition-shadow bg-card">
+                    <CardContent className="p-6 flex items-start gap-4">
+                        <Users className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                            <h3 className="font-bold text-lg">Acesso à Comunidade VIP de Alunas</h3>
+                            <p className="text-base md:text-lg text-muted-foreground">Faça parte de um grupo exclusivo de artesãs para compartilhar suas criações, trocar experiências e se inspirar.</p>
+                        </div>
+                    </CardContent>
+                </Card>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
           <div className="max-w-6xl mx-auto px-5">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">O que você vai conquistar com o <span className="text-primary">Plano Completo</span></h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
@@ -153,7 +200,7 @@ export default function CrochetLandingPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
           <div className="max-w-6xl mx-auto px-5">
             <h2 className="text-3xl md:text-4xl font-headline font-black text-center mb-12">6 Motivos para Investir no Plano Completo</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -442,5 +489,7 @@ export default function CrochetLandingPage() {
     </div>
   );
 }
+
+    
 
     
